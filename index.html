@@ -337,23 +337,23 @@
   </footer>
 
   <script>
-    // Image sources exported from the Figma design.
-    // These are temporary Figma asset URLs; replace with permanent assets
-    // (see assets/ and the data-img keys) for production use.
+    // Image sources. These point at local files in /images, which currently
+    // hold labelled placeholders. To use the real photos, just drop files with
+    // the same names into the images/ folder (see images/README.md).
     var IMAGES = {
-      hero:      "https://www.figma.com/api/mcp/asset/a9098d22-bdca-4b94-8ecf-c4236b036e33",
-      fire:      "https://www.figma.com/api/mcp/asset/33a8d56a-3ec3-4b8e-8311-c5fbc375c3ff",
-      urban:     "https://www.figma.com/api/mcp/asset/807a7ee8-faaf-44fc-8777-39b56af65f7e",
-      empty:     "https://www.figma.com/api/mcp/asset/3683a8d2-a38b-47ae-b4e1-664ad6434f3b",
-      coastal:   "https://www.figma.com/api/mcp/asset/e6d8427d-8ef6-4132-ac53-7b0f5aebfde4",
-      nuri:      "https://www.figma.com/api/mcp/asset/481cd0f9-c310-4dec-b4c8-4c61b6fd4003",
-      market:    "https://www.figma.com/api/mcp/asset/c739b2cc-1d0f-40bb-a6cf-4301ae778691",
-      kiriko:    "https://www.figma.com/api/mcp/asset/8b950938-4862-4dad-a70e-94c7a00bf584",
-      about:     "https://www.figma.com/api/mcp/asset/0877db35-d17d-494e-8fab-b3a9899cb2c5",
-      remapping: "https://www.figma.com/api/mcp/asset/1af03caa-5740-4022-9ae0-27073e765505",
-      survey:    "https://www.figma.com/api/mcp/asset/fb34a783-bc61-4b55-bb55-81b4dd3fa457",
-      workshop:  "https://www.figma.com/api/mcp/asset/6e0c2b39-9bef-4aa6-981a-f4c53e12bff7",
-      aerial:    "https://www.figma.com/api/mcp/asset/1d345ebd-bdf5-448f-8ba3-d7ca6e66b553"
+      hero:      "images/hero.jpg",
+      fire:      "images/fire.jpg",
+      urban:     "images/urban.jpg",
+      empty:     "images/empty.jpg",
+      coastal:   "images/coastal.jpg",
+      nuri:      "images/nuri.jpg",
+      market:    "images/market.jpg",
+      kiriko:    "images/kiriko.jpg",
+      about:     "images/about.jpg",
+      remapping: "images/remapping.jpg",
+      survey:    "images/survey.jpg",
+      workshop:  "images/workshop.jpg",
+      aerial:    "images/aerial.jpg"
     };
     document.querySelectorAll("img[data-img]").forEach(function (img) {
       var key = img.getAttribute("data-img");
