@@ -12,10 +12,11 @@
   --max: 1280px;
   --pad: 48px;
 
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Inter", system-ui, -apple-system, sans-serif;
-  --jp: "Noto Serif JP", "Shippori Mincho B1", serif;
-  --jp-display: "Shippori Mincho B1", "Noto Serif JP", serif;
+  /* One font per category, used consistently throughout. */
+  --serif: "Cormorant Garamond", Georgia, serif;        /* display / headings */
+  --sans: "Inter", system-ui, -apple-system, sans-serif; /* body / UI */
+  --jp: "Noto Serif JP", serif;                          /* all Japanese text */
+  --jp-display: var(--jp);                               /* alias, kept for clarity */
 }
 
 * { box-sizing: border-box; }
@@ -37,6 +38,8 @@ a { color: inherit; text-decoration: none; }
 
 p { margin: 0; }
 
+figure, figcaption { margin: 0; }
+
 .container {
   width: 100%;
   max-width: var(--max);
@@ -51,10 +54,10 @@ p { margin: 0; }
   font-size: 10px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(27, 31, 42, 0.35);
+  color: rgba(27, 31, 42, 0.5);
 }
 
-.kicker--light { color: rgba(255, 255, 255, 0.45); }
+.kicker--light { color: rgba(255, 255, 255, 0.5); }
 
 .jp { font-family: var(--jp); }
 
@@ -120,12 +123,12 @@ p { margin: 0; }
   font-size: 11px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.8);
 }
 .brand__jp {
   font-family: var(--jp);
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .nav__links {
@@ -152,7 +155,7 @@ p { margin: 0; }
 .nav__link .jp {
   display: block;
   font-size: 10px;
-  color: rgba(255, 255, 255, 0.28);
+  color: rgba(255, 255, 255, 0.7);
   line-height: 1.5;
 }
 
@@ -175,7 +178,7 @@ p { margin: 0; }
   font-size: 10px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .hero__title {
@@ -191,7 +194,7 @@ p { margin: 0; }
   font-size: 40px;
   line-height: 1.5;
   letter-spacing: -0.5px;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   margin: 0;
 }
 
@@ -200,15 +203,15 @@ p { margin: 0; }
   max-width: 392px;
 }
 .hero__lead p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 .hero__lead .jp {
   margin-top: 14px;
   font-family: var(--jp-display);
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   letter-spacing: -0.5px;
 }
 
@@ -226,7 +229,7 @@ p { margin: 0; }
   font-size: 10px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.38);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .damage__inner { padding: 64px var(--pad) 80px; }
@@ -237,7 +240,7 @@ p { margin: 0; }
   font-size: 137px;
   line-height: 1;
   letter-spacing: -4px;
-  color: rgba(255, 255, 255, 0.09);
+  color: rgba(255, 255, 255, 0.1);
   white-space: nowrap;
   overflow: hidden;
   margin: 40px 0 0;
@@ -262,24 +265,24 @@ p { margin: 0; }
 }
 .damage__sub {
   font-family: var(--jp);
-  font-size: 11px;
-  line-height: 1.9;
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.5);
   margin-top: 12px;
 }
 .damage__body {
   margin-top: 16px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.7);
 }
 .damage__body-jp {
   margin-top: 12px;
   font-family: var(--jp);
   font-size: 11px;
   line-height: 1.9;
-  color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* stats 2x2 */
@@ -293,22 +296,22 @@ p { margin: 0; }
 .stat__num {
   font-family: var(--serif);
   font-style: italic;
-  font-size: 35px;
+  font-size: 38.333px;
   line-height: 1;
   color: #fff;
 }
 .stat__label {
   margin-top: 12px;
-  font-size: 11px;
-  letter-spacing: 0.3px;
+  font-size: 11.979px;
+  letter-spacing: 0.36px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
 }
 .stat__jp {
   margin-top: 4px;
   font-family: var(--jp);
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.2);
+  font-size: 10.781px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 /* image mosaic */
@@ -349,13 +352,13 @@ p { margin: 0; }
   font-size: 9px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
 }
 .caption__jp {
   margin-top: 2px;
   font-family: var(--jp);
   font-size: 8px;
-  color: rgba(255, 255, 255, 0.36);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .damage__note {
@@ -377,7 +380,6 @@ p { margin: 0; }
 }
 .heritage__intro .rule { margin-top: 12px; flex: none; }
 .heritage__intro-body { max-width: 640px; }
-.heritage__intro .kicker { color: rgba(27, 31, 42, 0.35); }
 .heritage__h2 {
   font-family: var(--serif);
   font-weight: 400;
@@ -388,17 +390,17 @@ p { margin: 0; }
 }
 .heritage__lead {
   margin-top: 16px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(27, 31, 42, 0.55);
+  color: rgba(27, 31, 42, 0.7);
 }
 .heritage__lead-jp {
   margin-top: 8px;
   font-family: var(--jp);
   font-size: 11px;
   line-height: 1.5;
-  color: rgba(27, 31, 42, 0.38);
+  color: rgba(27, 31, 42, 0.5);
 }
 
 .heritage__grid {
@@ -439,11 +441,11 @@ p { margin: 0; }
   font-size: 9px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(27, 31, 42, 0.38);
+  color: rgba(27, 31, 42, 0.5);
 }
 .hcard__title {
   font-family: var(--serif);
-  font-weight: 400;
+  font-weight: 500;
   font-size: 28px;
   line-height: 1.15;
   color: var(--ink);
@@ -453,21 +455,21 @@ p { margin: 0; }
   margin-top: 4px;
   font-family: var(--jp);
   font-size: 11px;
-  color: rgba(27, 31, 42, 0.38);
+  color: rgba(27, 31, 42, 0.5);
 }
 .hcard__text {
   margin-top: 20px;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.8;
-  color: rgba(27, 31, 42, 0.58);
+  color: rgba(27, 31, 42, 0.7);
 }
 .hcard__text-jp {
   margin-top: 12px;
   font-family: var(--jp);
   font-size: 11px;
   line-height: 1.5;
-  color: rgba(27, 31, 42, 0.38);
+  color: rgba(27, 31, 42, 0.5);
 }
 
 /* ============================================================
@@ -494,7 +496,7 @@ p { margin: 0; }
   margin-top: 8px;
   font-family: var(--jp);
   font-size: 11px;
-  color: rgba(27, 31, 42, 0.3);
+  color: rgba(27, 31, 42, 0.5);
 }
 .about__rule { margin: 32px 0 0; width: 32px; }
 .about__text {
@@ -504,17 +506,17 @@ p { margin: 0; }
   gap: 16px;
 }
 .about__text p {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 15px;
   line-height: 1.8;
-  color: rgba(27, 31, 42, 0.58);
+  color: rgba(27, 31, 42, 0.7);
 }
 .about__text .jp {
   margin-top: 8px;
   font-family: var(--jp);
   font-size: 11px;
   line-height: 2;
-  color: rgba(27, 31, 42, 0.28);
+  color: rgba(27, 31, 42, 0.5);
 }
 
 .about__media .frame {
@@ -531,7 +533,7 @@ p { margin: 0; }
 }
 .about__caption .label {
   font-size: 10px;
-  color: rgba(27, 31, 42, 0.38);
+  color: rgba(27, 31, 42, 0.5);
 }
 .carousel {
   display: flex;
@@ -550,7 +552,7 @@ p { margin: 0; }
   transition: opacity 0.2s ease;
 }
 .carousel button:hover { opacity: 0.9; }
-.carousel .count { font-size: 9px; color: rgba(27, 31, 42, 0.35); }
+.carousel .count { font-size: 9px; color: rgba(27, 31, 42, 0.5); }
 
 /* Framework principles */
 .principles {
@@ -576,6 +578,7 @@ p { margin: 0; }
 }
 .principle__title {
   font-family: var(--serif);
+  font-weight: 500;
   font-style: italic;
   font-size: 24px;
   line-height: 1.2;
@@ -586,7 +589,7 @@ p { margin: 0; }
   margin-top: 4px;
   font-family: var(--jp);
   font-size: 10px;
-  color: rgba(27, 31, 42, 0.32);
+  color: rgba(27, 31, 42, 0.5);
 }
 .principle .line {
   width: 20px;
@@ -595,17 +598,17 @@ p { margin: 0; }
   margin: 20px 0;
 }
 .principle__text {
-  font-weight: 300;
-  font-size: 13px;
-  line-height: 1.85;
-  color: rgba(27, 31, 42, 0.52);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.8;
+  color: rgba(27, 31, 42, 0.7);
 }
 .principle__text-jp {
   margin-top: 8px;
   font-family: var(--jp);
   font-size: 11px;
   line-height: 2;
-  color: rgba(27, 31, 42, 0.28);
+  color: rgba(27, 31, 42, 0.5);
 }
 
 /* ============================================================
@@ -625,18 +628,19 @@ p { margin: 0; }
 .docs__h2 {
   font-family: var(--serif);
   font-weight: 400;
-  font-size: 30px;
-  line-height: 1.2;
+  font-size: 42px;
+  line-height: 1;
   color: #fff;
-  margin: 15px 0 0;
+  margin: 16px 0 0;
 }
-.docs .kicker { color: rgba(255, 255, 255, 0.45); }
+.docs .kicker { color: rgba(255, 255, 255, 0.5); }
 .docs__viewall {
   font-size: 10px;
-  letter-spacing: 1px;
+  font-weight: 500;
+  letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   padding-bottom: 2px;
 }
 .docs__grid {
@@ -644,32 +648,35 @@ p { margin: 0; }
   grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   margin-top: 40px;
+  background: rgba(255, 255, 255, 0.06);
 }
-.dcard { background: rgba(255, 255, 255, 0.03); }
+.dcard { background: var(--ink); }
 .dcard__img {
   height: 220px;
   background: #232734;
   overflow: hidden;
 }
-.dcard__img img { width: 100%; height: 100%; object-fit: cover; }
+.dcard__img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
 .dcard__body { padding: 16px 20px 24px; }
 .dcard__meta {
   font-size: 9px;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.5);
 }
 .dcard__title {
   margin-top: 8px;
-  font-size: 15px;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================================
    FOOTER (dark)
    ============================================================ */
-.footer { background: var(--ink); color: #fff; }
+.footer { background: #141720; color: #fff; }
 .footer__inner {
   display: flex;
   justify-content: space-between;
@@ -677,38 +684,44 @@ p { margin: 0; }
   padding: 56px 0;
 }
 .footer__brand { max-width: 280px; }
-.footer__brand .name { font-size: 12px; color: rgba(255, 255, 255, 0.85); }
+.footer__brand .name {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
 .footer__brand .jp {
   margin-top: 4px;
   font-family: var(--jp);
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.7);
 }
 .footer__brand .rule {
   display: block;
   width: 24px;
   margin: 16px 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--red);
 }
 .footer__brand .desc {
-  font-size: 11px;
-  line-height: 1.7;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
 }
 .footer__cols { display: flex; gap: 64px; }
 .footer__col h4 {
   margin: 0 0 14px;
-  font-size: 10px;
-  letter-spacing: 1px;
+  font-size: 9px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.7);
   font-weight: 400;
 }
 .footer__col a {
   display: block;
-  font-size: 13px;
-  line-height: 2;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s ease;
 }
 .footer__col a:hover { color: #fff; }
@@ -722,11 +735,10 @@ p { margin: 0; }
   padding: 16px 0;
 }
 .footer__bar p {
-  font-size: 10px;
-  letter-spacing: 0.5px;
-  color: rgba(255, 255, 255, 0.4);
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.2);
 }
-.footer__bar .mark { color: var(--red); font-size: 10px; }
+.footer__bar .mark { color: var(--red); font-size: 9px; letter-spacing: 1px; }
 
 /* ============================================================
    RESPONSIVE
