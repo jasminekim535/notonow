@@ -159,6 +159,41 @@ figure, figcaption { margin: 0; }
   line-height: 1.5;
 }
 
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Language toggle */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  background: transparent;
+  padding: 6px 14px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: border-color 0.2s ease;
+}
+.lang-toggle:hover { border-color: rgba(255, 255, 255, 0.45); }
+.lang-toggle__opt {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s ease;
+}
+.lang-toggle__opt.is-on { color: #fff; }
+.lang-toggle__opt:last-of-type { font-family: var(--jp); letter-spacing: 0; }
+.lang-toggle__sep { color: rgba(255, 255, 255, 0.3); }
+
+/* Full Japanese translations: hidden by default, shown when toggled */
+.jp-full { display: none; }
+body.show-jp .jp-full { display: block; }
+
 /* Hero content */
 .hero__content {
   position: relative;
