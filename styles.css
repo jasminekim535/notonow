@@ -12,10 +12,11 @@
   --max: 1280px;
   --pad: 48px;
 
-  --serif: "Cormorant Garamond", Georgia, serif;
-  --sans: "Inter", system-ui, -apple-system, sans-serif;
-  --jp: "Noto Serif JP", "Shippori Mincho B1", serif;
-  --jp-display: "Shippori Mincho B1", "Noto Serif JP", serif;
+  /* One font per category, used consistently throughout. */
+  --serif: "Cormorant Garamond", Georgia, serif;       /* display / headings */
+  --sans: "Inter", system-ui, -apple-system, sans-serif; /* body / UI */
+  --jp: "Noto Serif JP", serif;                          /* all Japanese text */
+  --jp-display: var(--jp);                               /* alias, kept for clarity */
 }
 
 * { box-sizing: border-box; }
