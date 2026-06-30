@@ -683,6 +683,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   color: rgba(27, 31, 42, 0.5);
 }
 .principle .line {
+  display: block;
   width: 20px;
   height: 1px;
   background: rgba(27, 31, 42, 0.15);
