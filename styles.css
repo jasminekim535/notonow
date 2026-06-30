@@ -165,34 +165,89 @@ figure, figcaption { margin: 0; }
   gap: 40px;
 }
 
-/* Language toggle */
+/* Language toggle — segmented switch, active language = filled chip */
 .lang-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 999px;
   background: transparent;
-  padding: 6px 14px;
+  padding: 3px;
   cursor: pointer;
   font-family: var(--sans);
   font-size: 10px;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: border-color 0.2s ease;
 }
-.lang-toggle:hover { border-color: rgba(255, 255, 255, 0.45); }
+.lang-toggle__sep { display: none; }
 .lang-toggle__opt {
-  color: rgba(255, 255, 255, 0.4);
-  transition: color 0.2s ease;
+  padding: 4px 11px;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.55);
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.lang-toggle__opt.is-on { color: #fff; }
+.lang-toggle__opt.is-on { background: #fff; color: #1b1f2a; }
 .lang-toggle__opt:last-of-type { font-family: var(--jp); letter-spacing: 0; }
-.lang-toggle__sep { color: rgba(255, 255, 255, 0.3); }
 
-/* Full Japanese translations: hidden by default, shown when toggled */
+/* ============================================================
+   LANGUAGE MODES  (mode-en default / mode-jp)
+   ============================================================ */
+
+/* Full Japanese body text: only in Japanese mode */
 .jp-full { display: none; }
-body.show-jp .jp-full { display: block; }
+body.mode-jp .jp-full { display: block; }
+
+/* New JP section headings (base = EN-mode accent look) */
+.heritage__h2-jp { margin-top: 8px; font-family: var(--jp); font-size: 13px; color: rgba(27, 31, 42, 0.6); }
+.docs__h2-jp { margin-top: 8px; font-family: var(--jp); font-size: 13px; color: rgba(255, 255, 255, 0.6); }
+
+/* ---- Nav: Japanese leaves the bar in EN mode; English leaves in JP mode ---- */
+body.mode-en .nav__link .jp,
+body.mode-en .brand__jp { display: none; }
+body.mode-jp .nav__link .en { display: none; }
+body.mode-jp .nav__link .jp { font-size: 12px; color: #fff; letter-spacing: 1px; }
+body.mode-jp .brand__jp { color: rgba(255, 255, 255, 0.75); }
+
+/* ---- EN mode: lift the Japanese accents so they read clearly ---- */
+body.mode-en .hero__title-jp { color: rgba(255, 255, 255, 0.78); }
+body.mode-en .damage__sub { color: rgba(255, 255, 255, 0.7); }
+body.mode-en .hcard__title-jp { color: rgba(27, 31, 42, 0.62); }
+body.mode-en .about__h2-jp { color: rgba(27, 31, 42, 0.62); }
+body.mode-en .principle__title-jp { color: rgba(27, 31, 42, 0.6); }
+body.mode-en .kicker { color: rgba(27, 31, 42, 0.6); }
+body.mode-en .docs .kicker { color: rgba(255, 255, 255, 0.6); }
+
+/* ---- JP mode: English recedes ---- */
+body.mode-jp .t-en { display: none; }
+
+/* shrink English display headings into small secondary labels */
+body.mode-jp .hero__title { font-size: 30px; line-height: 1.1; opacity: 0.5; }
+body.mode-jp .damage__h2 { font-size: 17px; line-height: 1.45; opacity: 0.5; }
+body.mode-jp .heritage__h2 { font-size: 22px; opacity: 0.5; }
+body.mode-jp .about__h2 { font-size: 22px; opacity: 0.5; }
+body.mode-jp .hcard__title { font-size: 15px; opacity: 0.5; }
+body.mode-jp .principle__title { font-size: 14px; opacity: 0.5; }
+body.mode-jp .docs__h2 { font-size: 22px; opacity: 0.5; }
+
+/* promote Japanese headings / subtitles to lead */
+body.mode-jp .hero__title-jp { font-size: 60px; line-height: 1.1; color: #fff; margin-top: 10px; }
+body.mode-jp .damage__sub { font-size: 26px; line-height: 1.5; color: rgba(255, 255, 255, 0.92); margin-top: 10px; }
+body.mode-jp .heritage__h2-jp { font-size: 44px; line-height: 1.2; color: var(--ink); }
+body.mode-jp .about__h2-jp { font-size: 40px; line-height: 1.2; color: var(--ink); margin-top: 10px; }
+body.mode-jp .hcard__title-jp { font-size: 22px; line-height: 1.3; color: var(--ink); }
+body.mode-jp .principle__title-jp { font-size: 19px; line-height: 1.3; color: var(--ink); }
+body.mode-jp .docs__h2-jp { font-size: 32px; line-height: 1.2; color: #fff; }
+
+/* enlarge Japanese body text for comfortable reading */
+body.mode-jp .hero__lead .jp { font-size: 15px; line-height: 1.9; color: rgba(255, 255, 255, 0.8); }
+body.mode-jp .damage__body-jp { font-size: 15px; line-height: 2; color: rgba(255, 255, 255, 0.8); margin-top: 10px; }
+body.mode-jp .heritage__lead-jp { font-size: 15px; line-height: 2; color: rgba(27, 31, 42, 0.78); margin-top: 10px; }
+body.mode-jp .hcard__text-jp { font-size: 14px; line-height: 1.95; color: rgba(27, 31, 42, 0.78); margin-top: 14px; }
+body.mode-jp .about__text .jp { font-size: 15px; line-height: 2; color: rgba(27, 31, 42, 0.78); }
+body.mode-jp .principle__text-jp { font-size: 14px; line-height: 1.95; color: rgba(27, 31, 42, 0.78); margin-top: 14px; }
+body.mode-jp .stat__jp { font-size: 13px; color: rgba(255, 255, 255, 0.72); }
+body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 
 /* Hero content */
 .hero__content {
