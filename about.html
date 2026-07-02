@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About · Noto Now</title>
+  <meta name="description" content="About Noto Now — an architecture and urban recovery framework for Japan's Noto Peninsula: the disaster, the strategy, the approach, and the goal." />
+  <!-- Latin display + body fonts are self-hosted (bundled in /fonts) so they
+       always render, independent of any CDN. -->
+  <link rel="stylesheet" href="fonts.css" />
+  <!-- Japanese fonts are large (CJK); served from Google Fonts. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="mode-en">
+
+  <!-- ============================ NAV ============================ -->
+  <nav class="nav nav--solid">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html">
+        <p class="brand__en">noto Now</p>
+        <p class="brand__jp">輪島今</p>
+      </a>
+      <div class="nav__right">
+        <div class="nav__links">
+          <a class="nav__link" href="about.html"><span class="en">about</span><span class="jp">約</span></a>
+          <a class="nav__link" href="index.html#heritage"><span class="en">history</span><span class="jp">歴史</span></a>
+          <a class="nav__link" href="index.html#speculations"><span class="en">design</span><span class="jp">デザイン</span></a>
+          <a class="nav__link" href="index.html#footer"><span class="en">credits</span><span class="jp">クレジット</span></a>
+        </div>
+        <button id="langToggle" class="lang-toggle" type="button" aria-pressed="false"
+                title="Switch language · 言語を切り替える">
+          <span class="lang-toggle__opt is-on">EN</span>
+          <span class="lang-toggle__sep">/</span>
+          <span class="lang-toggle__opt">日本語</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================== ABOUT US ========================== -->
+  <section class="about about--framed" id="about">
+    <div class="container about__top">
+      <div class="about__intro">
+        <p class="kicker">About the Project · プロジェクトについて</p>
+        <h2 class="about__h2">About Us</h2>
+        <p class="about__h2-jp">私たちについて</p>
+        <span class="rule about__rule"></span>
+        <div class="about__text">
+          <p class="t-en">Noto Now is a project of the Now Institute, developed in partnership with the City of Wajima, the USC School of Architecture, Rise-Kyoto, Nippon Design Center USA, and the University of Hiroshima.</p>
+          <p class="t-en">The project guides the city's recovery through an urban framework that restores spatial hierarchies, honors the craft district, and introduces structural performance where the old fabric was most vulnerable.</p>
+          <p class="jp jp-full">Noto NowはNow Instituteのプロジェクトで、輪島市、USC建築学部、Rise-Kyoto、Nippon Design Center USA、広島大学との協力で開発されました。このプロジェクトは、空間階層を回復し、工芸地区を尊重し、古い建物構造が最も脆弱だった場所に構造性能を導入する都市フレームワークを通じて、市の復興を導きます。</p>
+        </div>
+      </div>
+
+      <div class="about__media">
+        <div class="frame"><img data-img="about" alt="Traditional joinery, Wajima townhouse" /></div>
+        <div class="about__caption">
+          <span class="label t-en">Traditional joinery, Wajima townhouse</span>
+          <div class="carousel">
+            <button type="button" aria-label="Previous">&#8592;</button>
+            <span class="count">1 / 3</span>
+            <button type="button" aria-label="Next">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= NOTO NOW 1 ========================= -->
+  <section class="story">
+    <div class="container story__inner">
+      <p class="kicker">Noto Now 1 · ノト現在1</p>
+
+      <div class="story__grid">
+        <article class="story-card">
+          <div class="story-card__img"><img data-img="disaster" alt="The disaster — earthquake damage in Wajima" /></div>
+          <div class="story-card__body">
+            <p class="story-card__no">01</p>
+            <h3 class="story-card__title">The disaster</h3>
+            <p class="story-card__title-jp jp">災害</p>
+            <span class="story-card__rule"></span>
+            <p class="story-card__text t-en">On January 1, 2024, a devastating 7.6 magnitude earthquake struck Ishikawa Prefecture's Noto Peninsula, with Wajima and Suzu among the hardest-hit communities. Wajima endured cascading disasters — fires, floods, and mudslides — that compounded recovery challenges.</p>
+            <p class="story-card__text-jp jp jp-full">2024年1月1日、マグニチュード7.6の壊滅的な地震が石川県の能登半島を襲い、輪島市と珠洲市は最も甚大な被害を受けた地域となりました。輪島は火災、洪水、土砂崩れといった連鎖的な災害に見舞われ、復興の課題がさらに深刻化しました。</p>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <div class="story-card__img"><img data-img="strategy" alt="The strategy — coastal community" /></div>
+          <div class="story-card__body">
+            <p class="story-card__no">02</p>
+            <h3 class="story-card__title">The strategy</h3>
+            <p class="story-card__title-jp jp">戦略</p>
+            <span class="story-card__rule"></span>
+            <p class="story-card__text t-en">The NOW Institute proposes a comprehensive resilience strategy integrating disaster-resistant master planning with economic revitalization through cultural assets: Wajima lacquerware, the Kiriko festival, and world-class agriculture including seafood and Wagyu beef.</p>
+            <p class="story-card__text-jp jp jp-full">NOW Instituteは、防災に強いマスタープランと、輪島塗・キリコ祭り・海産物や和牛を含む世界クラスの農業といった文化資産による経済再生を統合した、包括的なレジリエンス戦略を提案します。</p>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <div class="story-card__img"><img data-img="approach" alt="The approach — urban planning scales" /></div>
+          <div class="story-card__body">
+            <p class="story-card__no">03</p>
+            <h3 class="story-card__title">The approach</h3>
+            <p class="story-card__title-jp jp">アプローチ</p>
+            <span class="story-card__rule"></span>
+            <p class="story-card__text t-en">This publication presents an integrated approach leveraging Oku-Noto's heritage to catalyze spatial disaster planning across three scales: regional planning, urban design, architectural speculations.</p>
+            <p class="story-card__text-jp jp jp-full">本書は、奥能登の遺産を活かし、地域計画・都市デザイン・建築的構想という三つのスケールにわたって空間的な防災計画を促す統合的なアプローチを提示します。</p>
+          </div>
+        </article>
+
+        <article class="story-card">
+          <div class="story-card__img"><img data-img="goal" alt="The goal — resilient waterfront community" /></div>
+          <div class="story-card__body">
+            <p class="story-card__no">04</p>
+            <h3 class="story-card__title">The goal</h3>
+            <p class="story-card__title-jp jp">目標</p>
+            <span class="story-card__rule"></span>
+            <p class="story-card__text t-en">By grounding recovery in place-specific cultural and economic strengths, the strategy aims to rebuild community resilience while preserving what makes Oku-Noto and the cities of Wajima and Suzu distinctive.</p>
+            <p class="story-card__text-jp jp jp-full">その土地固有の文化的・経済的な強みに復興を根ざすことで、この戦略は奥能登と輪島・珠洲の街々ならではの個性を守りながら、地域のレジリエンスを再構築することを目指します。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer" id="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="name">noto Now</div>
+        <div class="jp">輪島今</div>
+        <span class="rule"></span>
+        <p class="desc t-en">Urban architecture framework commissioned by Ishikawa Prefecture for the recovery of Noto.</p>
+        <p class="desc jp jp-full">石川県から委託された、能登の復興のための都市建築フレームワーク。</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h4><span class="t-en">about</span><span class="jp jp-full">約</span></h4>
+          <a href="about.html"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
+          <a href="index.html#speculations"><span class="t-en">Projects</span><span class="jp jp-full">プロジェクト</span></a>
+        </div>
+        <div class="footer__col">
+          <h4><span class="t-en">history</span><span class="jp jp-full">歴史</span></h4>
+          <a href="index.html#heritage"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
+          <a href="index.html"><span class="t-en">Earthquake</span><span class="jp jp-full">地震</span></a>
+          <a href="index.html#heritage"><span class="t-en">Regional Attributes</span><span class="jp jp-full">地域の特性</span></a>
+          <a href="index.html#documentation"><span class="t-en">Site Images</span><span class="jp jp-full">現場写真</span></a>
+        </div>
+        <div class="footer__col">
+          <h4><span class="t-en">design</span><span class="jp jp-full">デザイン</span></h4>
+          <a href="index.html#speculations"><span class="t-en">Urban Planning</span><span class="jp jp-full">都市計画</span></a>
+          <a href="index.html#speculations"><span class="t-en">Challenges</span><span class="jp jp-full">課題</span></a>
+          <a href="index.html#speculations"><span class="t-en">Strategies</span><span class="jp jp-full">戦略</span></a>
+          <a href="index.html#speculations"><span class="t-en">Architecture</span><span class="jp jp-full">建築</span></a>
+        </div>
+        <div class="footer__col">
+          <h4><span class="t-en">credits</span><span class="jp jp-full">クレジット</span></h4>
+          <a href="#"><span class="t-en">Executive Producers</span><span class="jp jp-full">エグゼクティブプロデューサー</span></a>
+          <a href="#"><span class="t-en">Special Support</span><span class="jp jp-full">特別協力</span></a>
+          <a href="#"><span class="t-en">Urban Planning Research</span><span class="jp jp-full">都市計画リサーチ</span></a>
+          <a href="#"><span class="t-en">Design &amp; Editing</span><span class="jp jp-full">デザインと編集</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bar">
+      <div class="container footer__bar-inner">
+        <p>© 2026 Noto Now</p>
+        <span class="mark">■</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---- Images -------------------------------------------------------------
+    // Live Figma export URLs where available; everything falls back to the
+    // matching local placeholder in /images (Figma URLs expire ~7 days out).
+    var FIGMA = {
+      about:    "https://www.figma.com/api/mcp/asset/073072f6-46e5-4cc9-94c3-a204b36fd7e3",
+      disaster: "https://www.figma.com/api/mcp/asset/6051b42a-5243-4b6c-af58-f65b2acdbe91",
+      strategy: "https://www.figma.com/api/mcp/asset/3dcec760-a16d-417b-90a6-c1dfe36041e5",
+      approach: "https://www.figma.com/api/mcp/asset/026ae7b7-bd31-4519-9587-ade8e8254b73",
+      goal:     "https://www.figma.com/api/mcp/asset/abb60f8b-3606-4892-b126-72eb2679db33"
+    };
+    document.querySelectorAll("img[data-img]").forEach(function (img) {
+      var key = img.getAttribute("data-img");
+      img.onerror = function () { img.onerror = null; img.src = "images/" + key + ".jpg"; };
+      img.src = FIGMA[key] || ("images/" + key + ".jpg");
+    });
+
+    // ---- Language toggle ----------------------------------------------------
+    (function () {
+      var btn = document.getElementById("langToggle");
+      if (!btn) return;
+      var opts = btn.querySelectorAll(".lang-toggle__opt");
+      btn.addEventListener("click", function () {
+        var jp = !document.body.classList.contains("mode-jp");
+        document.body.classList.toggle("mode-jp", jp);
+        document.body.classList.toggle("mode-en", !jp);
+        document.documentElement.lang = jp ? "ja" : "en";
+        btn.setAttribute("aria-pressed", jp ? "true" : "false");
+        opts[0].classList.toggle("is-on", !jp);
+        opts[1].classList.toggle("is-on", jp);
+        document.dispatchEvent(new Event("langchange"));
+      });
+    })();
+  </script>
+</body>
+</html>

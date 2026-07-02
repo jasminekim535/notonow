@@ -17,7 +17,8 @@ python3 -m http.server 8000
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Page markup — hero, damage essay, heritage cards, about + framework principles, field documentation, footer |
+| `index.html` | Home page — hero, damage essay, heritage cards, about + framework principles, field documentation, footer |
+| `about.html` | About page — About Us section + "Noto Now 1" editorial card grid (the disaster / strategy / approach / goal) |
 | `styles.css` | All styling (design tokens, layout, responsive breakpoints) |
 
 ## Design notes
