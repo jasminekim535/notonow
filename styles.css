@@ -1461,8 +1461,37 @@ body.mode-jp .history-intro__body p {
   font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 40px);
   color: var(--ink); margin: 8px 0 0;
 }
-.dz-map { max-width: 1040px; margin: 48px auto 0; }
-.dz-map__full { width: 100%; height: auto; display: block; }
+.dz-map {
+  position: relative; max-width: 1040px; margin: 48px auto 0;
+  aspect-ratio: 820 / 635;
+}
+.dz-map__peninsula {
+  position: absolute; left: 26.8%; top: 6.3%; width: 39%; height: auto; display: block;
+}
+.dz-map__overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dz-map__card {
+  position: absolute; width: 22%;
+  background: var(--paper); border: 1px solid rgba(27,31,42,0.14); padding: 14px 16px;
+}
+.dz-map__card--tl { left: 1%; top: 18%; }
+.dz-map__card--bl { left: 1%; top: 55%; }
+.dz-map__card--tr { left: 67%; top: 16%; }
+.dz-map__card--br { left: 67%; top: 53%; }
+.dz-map-card__head { display: flex; align-items: baseline; gap: 8px; }
+.dz-map-card__no { font-family: var(--sans); font-size: 9px; color: var(--red); flex: none; }
+.dz-map-card__title {
+  font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
+  text-transform: uppercase; color: var(--ink);
+}
+.dz-map-card__jp { margin: 3px 0 0; font-size: 9px; color: rgba(27,31,42,0.45); }
+.dz-map-card__body {
+  font-family: var(--sans); font-size: 10px; line-height: 1.6;
+  color: rgba(27,31,42,0.6); margin: 8px 0 0;
+}
+/* JP mode: promote the Japanese subtitle to the card lead, shrink the English */
+body.mode-jp .dz-map-card__title { font-size: 9px; opacity: 0.5; }
+body.mode-jp .dz-map-card__jp { font-size: 12px; color: var(--ink); margin-top: 2px; }
+body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: rgba(27,31,42,0.7); }
 
 /* --- F · Three urban strategies for Wajima (light image cards) --- */
 .dz-urban { background: var(--paper); }
@@ -1504,8 +1533,51 @@ body.mode-jp .history-intro__body p {
   .dz-strat-col { padding: 32px 0; }
   .dz-strat-col + .dz-strat-col { border-left: none; border-top: 1px solid rgba(255,255,255,0.15); padding-left: 0; }
   .dz-urban__grid { grid-template-columns: 1fr; }
+  /* stack the map diagram: peninsula on top, cards in a grid below */
+  .dz-map { position: static; aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .dz-map__peninsula { position: static; inset: auto; grid-column: 1 / -1; width: 240px; margin: 0 auto; }
+  .dz-map__overlay { display: none; }
+  .dz-map__card { position: static; width: auto; }
 }
 @media (max-width: 560px) {
   .dz-chal-row__big { font-size: 84px; }
   .dz-hero__source { display: none; }
+  .dz-map { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   DESIGN PAGE · Japanese mode — promote JP above the English
+   ============================================================ */
+/* A · Foundation hero (dark) */
+body.mode-jp .dz-hero__h1 { font-size: clamp(20px, 2.4vw, 30px); opacity: 0.5; }
+body.mode-jp .dz-hero__h1-jp {
+  font-size: clamp(26px, 3.2vw, 38px); line-height: 1.45; color: #f5f2ec; margin-top: 16px;
+}
+body.mode-jp .dz-hero__item-title { font-size: 14px; opacity: 0.5; }
+body.mode-jp .dz-hero__item-jp { font-size: 18px; color: #f5f2ec; }
+body.mode-jp .dz-hero__item-body.jp { font-size: 13px; line-height: 2; color: rgba(255,255,255,0.6); }
+
+/* B · Three scales (dark) */
+body.mode-jp .dz-scale__title { font-size: 12px; opacity: 0.5; }
+body.mode-jp .dz-scale__title-jp { font-size: 17px; color: rgba(255,255,255,0.85); margin-top: 6px; }
+body.mode-jp .dz-scale__desc.jp { font-size: 12px; line-height: 1.9; color: rgba(255,255,255,0.45); }
+
+/* C · Challenges (light) */
+body.mode-jp .dz-chal-row__title { font-size: clamp(20px, 2.6vw, 30px); opacity: 0.5; }
+body.mode-jp .dz-chal-row__jp {
+  font-family: var(--jp); font-size: clamp(26px, 3.4vw, 42px); line-height: 1.2;
+  color: var(--ink); margin-top: 4px;
+}
+body.mode-jp .dz-chal-panel__body.jp { font-size: 14px; line-height: 2; color: rgba(27,31,42,0.72); }
+body.mode-jp .dz-chal-row:hover .dz-chal-row__jp,
+body.mode-jp .dz-chal-item.is-open .dz-chal-row__jp { color: var(--red); }
+
+/* D · Strategies (dark) */
+body.mode-jp .dz-strat-col__title { font-size: 15px; opacity: 0.5; }
+body.mode-jp .dz-strat-col__sub { font-size: 22px; color: #f5f2ec; margin-top: 6px; }
+body.mode-jp .dz-strat-col__body.jp { font-size: 13px; line-height: 2; color: rgba(255,255,255,0.6); }
+
+/* F · Urban strategy cards (light) */
+body.mode-jp .dz-urban-card__title { font-size: 15px; opacity: 0.5; }
+body.mode-jp .dz-urban-card__jp { font-size: 20px; color: var(--ink); margin-top: 6px; }
+body.mode-jp .dz-urban-card__text.jp { font-size: 13px; line-height: 2; color: rgba(27,31,42,0.72); }
