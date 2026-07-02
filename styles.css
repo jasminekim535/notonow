@@ -1207,7 +1207,7 @@ body.mode-jp .story-card__title-jp {
 .history-intro__map {
   border-left: 1px solid rgba(27, 31, 42, 0.1);
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 .noto-map { width: 100%; max-width: 320px; height: auto; display: block; }
