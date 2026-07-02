@@ -1171,10 +1171,10 @@ body.mode-jp .story-card__title-jp {
 .history-intro { border-bottom: 1px solid rgba(27, 31, 42, 0.12); }
 .history-intro__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 380px;
+  grid-template-columns: 1fr 1fr;
   padding: 96px var(--pad) 104px;
 }
-.history-intro__text { padding-right: 72px; max-width: 620px; }
+.history-intro__text { padding-right: 64px; max-width: 600px; }
 .history-intro__h1 {
   font-family: var(--serif);
   font-style: italic;
@@ -1202,10 +1202,10 @@ body.mode-jp .story-card__title-jp {
 }
 .history-intro__body p:last-child { margin-bottom: 0; }
 
-/* Map column */
+/* Map column — map centered within the right half; the left border is the
+   central divider between the text and the map. */
 .history-intro__map {
   border-left: 1px solid rgba(27, 31, 42, 0.1);
-  padding-left: 56px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
