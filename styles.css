@@ -927,10 +927,11 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 /* Heritage cards become fixed-width carousel items (3 per view) */
 .heritage__track .hcard {
   flex: 0 0 33.3333%;
+  background: rgba(255, 255, 255, 0.55);
   border-right: 1px solid rgba(27, 31, 42, 0.15);
   border-bottom: none;
 }
-.heritage__track .hcard__img { height: 300px; }
+.heritage__track .hcard__img { height: 360px; }
 
 /* ---- Architectural Speculations ---- */
 .spec {
