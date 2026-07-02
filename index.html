@@ -350,25 +350,29 @@
         <article class="dcard">
           <div class="dcard__img"><img data-img="remapping" alt="Coastal remapping" /></div>
           <div class="dcard__body">
-            <div class="dcard__title">Coastal remapping</div>
+            <div class="dcard__title t-en">Coastal remapping</div>
+            <div class="dcard__title-jp jp-full">沿岸の再測量</div>
           </div>
         </article>
         <article class="dcard">
           <div class="dcard__img"><img data-img="survey" alt="Street-level survey" /></div>
           <div class="dcard__body">
-            <div class="dcard__title">Street-level survey</div>
+            <div class="dcard__title t-en">Street-level survey</div>
+            <div class="dcard__title-jp jp-full">街路レベル調査</div>
           </div>
         </article>
         <article class="dcard">
           <div class="dcard__img"><img data-img="workshop" alt="Workshop documentation" /></div>
           <div class="dcard__body">
-            <div class="dcard__title">Workshop documentation</div>
+            <div class="dcard__title t-en">Workshop documentation</div>
+            <div class="dcard__title-jp jp-full">工房の記録</div>
           </div>
         </article>
         <article class="dcard">
           <div class="dcard__img"><img data-img="aerial" alt="Aerial survey grids" /></div>
           <div class="dcard__body">
-            <div class="dcard__title">Aerial survey grids</div>
+            <div class="dcard__title t-en">Aerial survey grids</div>
+            <div class="dcard__title-jp jp-full">航空測量グリッド</div>
           </div>
         </article>
       </div>
@@ -382,34 +386,35 @@
         <div class="name">noto Now</div>
         <div class="jp">輪島今</div>
         <span class="rule"></span>
-        <p class="desc">Urban architecture framework commissioned by Ishikawa Prefecture for the recovery of Noto.</p>
+        <p class="desc t-en">Urban architecture framework commissioned by Ishikawa Prefecture for the recovery of Noto.</p>
+        <p class="desc jp jp-full">石川県から委託された、能登の復興のための都市建築フレームワーク。</p>
       </div>
       <div class="footer__cols">
         <div class="footer__col">
-          <h4>about</h4>
-          <a href="#about">Overview</a>
-          <a href="#speculations">Projects</a>
+          <h4><span class="t-en">about</span><span class="jp jp-full">約</span></h4>
+          <a href="#about"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
+          <a href="#speculations"><span class="t-en">Projects</span><span class="jp jp-full">プロジェクト</span></a>
         </div>
         <div class="footer__col">
-          <h4>history</h4>
-          <a href="#heritage">Overview</a>
-          <a href="#">Earthquake</a>
-          <a href="#heritage">Regional Attributes</a>
-          <a href="#">Site Images</a>
+          <h4><span class="t-en">history</span><span class="jp jp-full">歴史</span></h4>
+          <a href="#heritage"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
+          <a href="#"><span class="t-en">Earthquake</span><span class="jp jp-full">地震</span></a>
+          <a href="#heritage"><span class="t-en">Regional Attributes</span><span class="jp jp-full">地域の特性</span></a>
+          <a href="#"><span class="t-en">Site Images</span><span class="jp jp-full">現場写真</span></a>
         </div>
         <div class="footer__col">
-          <h4>design</h4>
-          <a href="#">Urban Planning</a>
-          <a href="#">Challenges</a>
-          <a href="#speculations">Strategies</a>
-          <a href="#">Architecture</a>
+          <h4><span class="t-en">design</span><span class="jp jp-full">デザイン</span></h4>
+          <a href="#"><span class="t-en">Urban Planning</span><span class="jp jp-full">都市計画</span></a>
+          <a href="#"><span class="t-en">Challenges</span><span class="jp jp-full">課題</span></a>
+          <a href="#speculations"><span class="t-en">Strategies</span><span class="jp jp-full">戦略</span></a>
+          <a href="#"><span class="t-en">Architecture</span><span class="jp jp-full">建築</span></a>
         </div>
         <div class="footer__col">
-          <h4>credits</h4>
-          <a href="#">Executive Producers</a>
-          <a href="#">Special Support</a>
-          <a href="#">Urban Planning Research</a>
-          <a href="#">Design &amp; Editing</a>
+          <h4><span class="t-en">credits</span><span class="jp jp-full">クレジット</span></h4>
+          <a href="#"><span class="t-en">Executive Producers</span><span class="jp jp-full">エグゼクティブプロデューサー</span></a>
+          <a href="#"><span class="t-en">Special Support</span><span class="jp jp-full">特別協力</span></a>
+          <a href="#"><span class="t-en">Urban Planning Research</span><span class="jp jp-full">都市計画リサーチ</span></a>
+          <a href="#"><span class="t-en">Design &amp; Editing</span><span class="jp jp-full">デザインと編集</span></a>
         </div>
       </div>
     </div>
@@ -457,6 +462,7 @@
         btn.setAttribute("aria-pressed", jp ? "true" : "false");
         opts[0].classList.toggle("is-on", !jp);
         opts[1].classList.toggle("is-on", jp);
+        document.dispatchEvent(new Event("langchange"));
       });
     })();
 
@@ -504,17 +510,17 @@
       var root = document.querySelector("[data-spec]");
       if (!root) return;
       var slides = [
-        { img: "spec1",  t: "Flood control villages", d: "Mitigate mudslides by tier and dampen successive stages of river flow to the sea by creating diversionary ponds and lakes to slow the speed of the water. Leverage these lakes as resort towns for the tourist economy." },
-        { img: "spec2",  t: "New culinary school and urban farm", d: "Culinary school that specializes in the agricultural bounty of Oku-Noto, which further promotes the role of urban farming to contribute to a larger sponge landscape strategy against flooding." },
-        { img: "spec3",  t: "New morning market & community center", d: "Rebirth of the morning market which was a hub for every Wajima resident as a hybridized destination of a market, community center, and emergency shelter." },
-        { img: "spec4",  t: "New Wajima-Nuri school", d: "Create a school for lacquerware to help maintain the cultural position of the tradition for generations." },
-        { img: "spec5",  t: "New jozu shrine", d: "Rebirth of one of the key shrines that was destroyed during the earthquake as both a shrine and a place of refuge in the event of a natural disaster." },
-        { img: "spec6",  t: "Community center / emergency shelter", d: "An anchor to the southern tip of the evacuation route with the capacity to shelter and triage 50% of Wajima's population, designed to accommodate expansion for the future." },
-        { img: "spec7",  t: "New Wajima train station", d: "Ensuring Oku-Noto and Wajima's transportation is critical to their future, as it is limited currently. Reintroduce rail connection as the essential seed for future-proofing a vital, rich vision for the region." },
-        { img: "spec8",  t: "Kiriko craft square", d: "A crafts village and square dedicated to Kiriko float construction serves as a community anchor, drawing international students and craftspeople for months-long apprenticeships." },
-        { img: "spec9",  t: "Urban farm and culinary center", d: "A culinary partnership connecting cooking schools with Noto's farmers, fishermen, and traditional kitchens — bringing students and chefs for seasonal training that promotes local ingredients and sustains year-round activity for the region's agriculture and fisheries." },
-        { img: "spec10", t: "Kiriko outdoor museum", d: "Collecting relics and artifacts from several yearly festivals as a memorial and museum for the Kiriko Festival." },
-        { img: "spec11", t: "Noto's table: culinary school & restaurant", d: "A proposal for a culinary school specializing in the agricultural bounty of Oku-Noto, further promoting the role of urban farming as part of a larger sponge-landscape strategy against flooding." }
+        { img: "spec1",  t: "Flood control villages", d: "Mitigate mudslides by tier and dampen successive stages of river flow to the sea by creating diversionary ponds and lakes to slow the speed of the water. Leverage these lakes as resort towns for the tourist economy.", tj: "治水の村", dj: "段階的に土砂崩れを抑え、分水池や湖を設けて川から海への流れを緩やかにし、水の速度を落とす。これらの湖を観光経済のためのリゾート地として活用する。" },
+        { img: "spec2",  t: "New culinary school and urban farm", d: "Culinary school that specializes in the agricultural bounty of Oku-Noto, which further promotes the role of urban farming to contribute to a larger sponge landscape strategy against flooding.", tj: "新しい料理学校と都市農園", dj: "奥能登の農産物を専門とする料理学校。都市農業の役割をさらに促進し、洪水対策としての大規模なスポンジランドスケープ戦略に貢献する。" },
+        { img: "spec3",  t: "New morning market & community center", d: "Rebirth of the morning market which was a hub for every Wajima resident as a hybridized destination of a market, community center, and emergency shelter.", tj: "新しい朝市とコミュニティセンター", dj: "輪島のすべての住民の拠点であった朝市を、市場・コミュニティセンター・避難所を兼ねた複合施設として再生する。" },
+        { img: "spec4",  t: "New Wajima-Nuri school", d: "Create a school for lacquerware to help maintain the cultural position of the tradition for generations.", tj: "新しい輪島塗学校", dj: "輪島塗の学校を設立し、その伝統の文化的地位を次世代へと守り継ぐ。" },
+        { img: "spec5",  t: "New jozu shrine", d: "Rebirth of one of the key shrines that was destroyed during the earthquake as both a shrine and a place of refuge in the event of a natural disaster.", tj: "新しい神社", dj: "地震で失われた主要な神社の一つを、神社であると同時に自然災害時の避難場所として再建する。" },
+        { img: "spec6",  t: "Community center / emergency shelter", d: "An anchor to the southern tip of the evacuation route with the capacity to shelter and triage 50% of Wajima's population, designed to accommodate expansion for the future.", tj: "コミュニティセンター／避難所", dj: "避難経路の南端の拠点として、輪島の人口の50%を収容・トリアージできる能力を持ち、将来の拡張にも対応できるよう設計されている。" },
+        { img: "spec7",  t: "New Wajima train station", d: "Ensuring Oku-Noto and Wajima's transportation is critical to their future, as it is limited currently. Reintroduce rail connection as the essential seed for future-proofing a vital, rich vision for the region.", tj: "新しい輪島駅", dj: "奥能登と輪島の交通は現在限られており、その未来にとって極めて重要である。地域の豊かな未来を支える不可欠な種として、鉄道接続を再導入する。" },
+        { img: "spec8",  t: "Kiriko craft square", d: "A crafts village and square dedicated to Kiriko float construction serves as a community anchor, drawing international students and craftspeople for months-long apprenticeships.", tj: "キリコ工芸広場", dj: "キリコ山車の制作に特化した工芸村と広場は、地域の拠点となり、数か月にわたる研修のために海外からの学生や職人を惹きつける。" },
+        { img: "spec9",  t: "Urban farm and culinary center", d: "A culinary partnership connecting cooking schools with Noto's farmers, fishermen, and traditional kitchens — bringing students and chefs for seasonal training that promotes local ingredients and sustains year-round activity for the region's agriculture and fisheries.", tj: "都市農園と料理センター", dj: "料理学校と能登の農家・漁師・伝統的な厨房を結ぶ食の連携。学生とシェフを季節ごとの研修に招き、地元の食材を活かし、地域の農業と漁業に一年を通じた活気をもたらす。" },
+        { img: "spec10", t: "Kiriko outdoor museum", d: "Collecting relics and artifacts from several yearly festivals as a memorial and museum for the Kiriko Festival.", tj: "キリコ野外博物館", dj: "毎年の祭りから遺物や工芸品を集め、キリコ祭りの記念館・博物館とする。" },
+        { img: "spec11", t: "Noto's table: culinary school & restaurant", d: "A proposal for a culinary school specializing in the agricultural bounty of Oku-Noto, further promoting the role of urban farming as part of a larger sponge-landscape strategy against flooding.", tj: "能登のテーブル：料理学校とレストラン", dj: "奥能登の農産物を専門とする料理学校の提案。洪水対策としての大規模なスポンジランドスケープ戦略の一環として、都市農業の役割をさらに促進する。" }
       ];
       var img = root.querySelector("[data-spec-img]"),
           no = root.querySelector("[data-spec-no]"),
@@ -528,12 +534,15 @@
       function pad(n) { return (n < 10 ? "0" : "") + n; }
       function show() {
         var s = slides[i];
+        var jp = document.body.classList.contains("mode-jp");
         img.onerror = function () { img.onerror = null; img.src = "images/" + s.img + ".jpg"; };
         img.src = "images/" + s.img + ".jpg";
         img.alt = s.t;
         no.textContent = pad(i + 1);
-        title.textContent = s.t;
-        desc.textContent = s.d;
+        title.textContent = jp ? s.tj : s.t;
+        title.classList.toggle("jp", jp);
+        desc.textContent = jp ? s.dj : s.d;
+        desc.classList.toggle("jp", jp);
         ind.textContent = pad(i + 1) + " / " + slides.length;
         fill.style.width = ((i + 1) / slides.length * 100) + "%";
         prev.disabled = i === 0;
@@ -541,6 +550,7 @@
       }
       prev.addEventListener("click", function () { if (i > 0) { i--; show(); } });
       next.addEventListener("click", function () { if (i < slides.length - 1) { i++; show(); } });
+      document.addEventListener("langchange", show);
       show();
     })();
   </script>
