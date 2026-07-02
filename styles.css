@@ -1352,28 +1352,80 @@ body.mode-jp .history-intro__body p {
   color: rgba(255,255,255,0.3); margin: 6px 0 0;
 }
 
-/* --- C · Three challenges (light) --- */
+/* --- C · Three challenges (light, expandable accordion) --- */
 .dz-challenges { background: var(--paper); }
 .dz-chal__inner { padding: 48px var(--pad) 40px; }
 .dz-chal__list { margin-top: 40px; }
+.dz-chal-item { border-top: 1px solid rgba(27,31,42,0.12); }
+.dz-chal-item:last-child { border-bottom: 1px solid rgba(27,31,42,0.12); }
 .dz-chal-row {
   position: relative; display: flex; align-items: center; gap: 40px;
-  border-top: 1px solid rgba(27,31,42,0.12); padding: 34px 0; overflow: hidden;
+  width: 100%; padding: 34px 0; overflow: hidden;
+  background: none; border: 0; text-align: left; cursor: pointer;
+  font: inherit; color: inherit;
+  transition: padding-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .dz-chal-row__no {
   font-family: var(--sans); font-size: 10px; letter-spacing: 2px;
   color: rgba(27,31,42,0.4); flex: none; width: 24px;
+  transition: color 0.3s ease;
 }
+.dz-chal-row__text { transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1); }
 .dz-chal-row__title {
-  font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.6vw, 52px);
+  font-family: var(--serif); font-style: italic; font-weight: 400;
+  font-size: clamp(32px, 4.6vw, 52px);
   line-height: 1.05; color: var(--ink); margin: 0;
+  transition: color 0.3s ease;
 }
 .dz-chal-row__jp { margin: 6px 0 0; font-size: 11px; color: rgba(27,31,42,0.45); }
+/* + / × toggle affordance */
+.dz-chal-row__toggle {
+  margin-left: auto; flex: none; position: relative;
+  width: 18px; height: 18px; z-index: 1;
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dz-chal-row__toggle::before,
+.dz-chal-row__toggle::after {
+  content: ""; position: absolute; top: 50%; left: 50%;
+  background: rgba(27,31,42,0.55); transition: background 0.3s ease;
+}
+.dz-chal-row__toggle::before { width: 18px; height: 1px; transform: translate(-50%, -50%); }
+.dz-chal-row__toggle::after { width: 1px; height: 18px; transform: translate(-50%, -50%); }
 .dz-chal-row__big {
   position: absolute; right: 0; top: 50%; transform: translateY(-50%);
   font-family: var(--serif); font-style: italic; font-size: 120px; line-height: 1;
   color: rgba(27,31,42,0.05); pointer-events: none;
+  transition: color 0.3s ease;
 }
+
+/* hover: nudge the title in, warm the accents, lift the ghost number */
+.dz-chal-row:hover { padding-left: 12px; }
+.dz-chal-row:hover .dz-chal-row__title { color: var(--red); }
+.dz-chal-row:hover .dz-chal-row__no { color: var(--red); }
+.dz-chal-row:hover .dz-chal-row__big { color: rgba(125,53,53,0.08); }
+.dz-chal-row:hover .dz-chal-row__toggle::before,
+.dz-chal-row:hover .dz-chal-row__toggle::after { background: var(--red); }
+
+/* open state: rotate the + into an ×, keep the title accented */
+.dz-chal-item.is-open .dz-chal-row__toggle { transform: rotate(45deg); }
+.dz-chal-item.is-open .dz-chal-row__title { color: var(--red); }
+
+/* collapsible panel (animated via grid-template-rows) */
+.dz-chal-row__panel {
+  display: grid; grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dz-chal-item.is-open .dz-chal-row__panel { grid-template-rows: 1fr; }
+.dz-chal-panel__inner { overflow: hidden; }
+.dz-chal-panel__body {
+  max-width: 660px;
+  margin: 0 0 40px 64px;
+  padding-left: 32px;
+  border-left: 1px solid rgba(27,31,42,0.15);
+  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  color: rgba(27,31,42,0.68);
+}
+.dz-chal-panel__body.jp { font-size: 12px; line-height: 2; color: rgba(27,31,42,0.55); }
 
 /* --- D · Strategies (dark) --- */
 .dz-strategies { background: var(--ink); }
