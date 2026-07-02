@@ -1470,6 +1470,7 @@ body.mode-jp .history-intro__body p {
   position: absolute; left: 26.8%; top: 6.3%; width: 39%; height: auto; display: block;
 }
 .dz-map__overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dz-map__overlay--route { display: none; } /* route without connectors, for stacked view */
 /* Cards align to the connector-line endpoints baked into Icon.svg
    (left lines end at x≈24.4%, right lines at x≈66.5%; y≈27/63/25/62%). */
 .dz-map__card {
@@ -1540,6 +1541,9 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
      then flow the four cards below it — nothing is hidden. */
   .dz-map { position: static; aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 28px; }
   .dz-map__figure { position: relative; inset: auto; width: 320px; max-width: 88%; aspect-ratio: 820 / 635; }
+  /* stacked: drop the connector lines, keep only the red route */
+  .dz-map__overlay--full { display: none; }
+  .dz-map__overlay--route { display: block; }
   .dz-map__card { position: static; width: 100%; max-width: 460px; }
   .dz-map__card--tl, .dz-map__card--bl, .dz-map__card--tr, .dz-map__card--br { left: auto; top: auto; }
 }
