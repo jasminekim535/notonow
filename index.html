@@ -321,6 +321,7 @@
           <span class="spec__no" data-spec-no>01</span>
           <div>
             <h3 class="spec__title" data-spec-title>Flood control villages</h3>
+            <p class="spec__subtitle jp" data-spec-sub>治水の村</p>
             <p class="spec__desc" data-spec-desc>Mitigate mudslides by tier and dampen successive stages of river flow to the sea by creating diversionary ponds and lakes to slow the speed of the water. Leverage these lakes as resort towns for the tourist economy.</p>
           </div>
         </div>
@@ -525,6 +526,7 @@
       var img = root.querySelector("[data-spec-img]"),
           no = root.querySelector("[data-spec-no]"),
           title = root.querySelector("[data-spec-title]"),
+          sub = root.querySelector("[data-spec-sub]"),
           desc = root.querySelector("[data-spec-desc]"),
           ind = root.querySelector("[data-spec-ind]"),
           fill = root.querySelector("[data-spec-fill]"),
@@ -541,6 +543,8 @@
         no.textContent = pad(i + 1);
         title.textContent = jp ? s.tj : s.t;
         title.classList.toggle("jp", jp);
+        sub.textContent = jp ? s.t : s.tj;   // small subtitle in the other language
+        sub.classList.toggle("jp", !jp);
         desc.textContent = jp ? s.dj : s.d;
         desc.classList.toggle("jp", jp);
         ind.textContent = pad(i + 1) + " / " + slides.length;
