@@ -1074,3 +1074,6 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
 @media (max-width: 820px) {
   .spec__track .hcard { flex-basis: 85%; }
 }
+
+/* Speculations card subtitle (accent in the other language) */
+.spec__subtitle { margin-top: 4px; font-size: 11px; line-height: 1.5; color: rgba(27, 31, 42, 0.5); }
