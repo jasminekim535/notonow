@@ -217,8 +217,7 @@ body.mode-en .about__h2-jp { color: rgba(27, 31, 42, 0.62); }
 body.mode-en .principle__title-jp { color: rgba(27, 31, 42, 0.6); }
 body.mode-en .kicker { color: rgba(27, 31, 42, 0.6); }
 body.mode-en .docs .kicker { color: rgba(255, 255, 255, 0.6); }
-/* Site Images has no JP subtitle in the design; show it only in JP mode */
-body.mode-en .docs__h2-jp { display: none; }
+body.mode-en .docs__h2-jp { color: rgba(255, 255, 255, 0.6); }
 
 /* ---- JP mode: English recedes ---- */
 body.mode-jp .t-en { display: none; }
