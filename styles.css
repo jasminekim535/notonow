@@ -1465,6 +1465,7 @@ body.mode-jp .history-intro__body p {
   position: relative; max-width: 1040px; margin: 48px auto 0;
   aspect-ratio: 820 / 635;
 }
+.dz-map__figure { position: absolute; inset: 0; }
 .dz-map__peninsula {
   position: absolute; left: 26.8%; top: 6.3%; width: 39%; height: auto; display: block;
 }
@@ -1473,7 +1474,7 @@ body.mode-jp .history-intro__body p {
    (left lines end at x≈24.4%, right lines at x≈66.5%; y≈27/63/25/62%). */
 .dz-map__card {
   position: absolute; width: 21.5%;
-  background: var(--paper); border: 1px solid rgba(27,31,42,0.14); padding: 14px 16px;
+  background: rgba(255,255,255,0.7); border: 1px solid rgba(27,31,42,0.14); padding: 14px 16px;
 }
 .dz-map__card--tl { left: 2.9%; top: 18.5%; }   /* right edge → 24.4% */
 .dz-map__card--bl { left: 2.9%; top: 54%; }
@@ -1535,16 +1536,16 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
   .dz-strat-col { padding: 32px 0; }
   .dz-strat-col + .dz-strat-col { border-left: none; border-top: 1px solid rgba(255,255,255,0.15); padding-left: 0; }
   .dz-urban__grid { grid-template-columns: 1fr; }
-  /* stack the map diagram: peninsula on top, cards in a grid below */
-  .dz-map { position: static; aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .dz-map__peninsula { position: static; inset: auto; grid-column: 1 / -1; width: 240px; margin: 0 auto; }
-  .dz-map__overlay { display: none; }
-  .dz-map__card { position: static; width: auto; }
+  /* stack the map: keep the full diagram (map + route + dots) as one figure,
+     then flow the four cards below it — nothing is hidden. */
+  .dz-map { position: static; aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 28px; }
+  .dz-map__figure { position: relative; inset: auto; width: 320px; max-width: 88%; aspect-ratio: 820 / 635; }
+  .dz-map__card { position: static; width: 100%; max-width: 460px; }
+  .dz-map__card--tl, .dz-map__card--bl, .dz-map__card--tr, .dz-map__card--br { left: auto; top: auto; }
 }
 @media (max-width: 560px) {
   .dz-chal-row__big { font-size: 84px; }
   .dz-hero__source { display: none; }
-  .dz-map { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
