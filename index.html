@@ -18,7 +18,7 @@
 
   <!-- ============================ HERO ============================ -->
   <header class="hero">
-    <img class="hero__bg" data-img="hero" alt="Structural collapse, Wajima city centre" onerror="this.style.display='none'" />
+    <img class="hero__bg" data-img="hero" alt="Structural collapse, Wajima city centre" />
     <div class="hero__overlay"></div>
 
     <nav class="nav">
@@ -31,11 +31,11 @@
           <div class="nav__links">
             <a class="nav__link" href="#about"><span class="en">about</span><span class="jp">約</span></a>
             <a class="nav__link" href="#heritage"><span class="en">history</span><span class="jp">歴史</span></a>
-            <a class="nav__link" href="#about"><span class="en">design</span><span class="jp">デザイン</span></a>
-            <a class="nav__link" href="#footer"><span class="en">Contact</span><span class="jp">連絡先</span></a>
+            <a class="nav__link" href="#speculations"><span class="en">design</span><span class="jp">デザイン</span></a>
+            <a class="nav__link" href="#footer"><span class="en">credits</span><span class="jp">クレジット</span></a>
           </div>
           <button id="langToggle" class="lang-toggle" type="button" aria-pressed="false"
-                  title="Show full Japanese · 日本語全文を表示">
+                  title="Switch language · 言語を切り替える">
             <span class="lang-toggle__opt is-on">EN</span>
             <span class="lang-toggle__sep">/</span>
             <span class="lang-toggle__opt">日本語</span>
@@ -57,6 +57,35 @@
       </div>
     </div>
   </header>
+
+  <!-- ========================== ABOUT US ========================== -->
+  <section class="about about--framed" id="about">
+    <div class="container about__top">
+      <div class="about__intro">
+        <p class="kicker">About the Project · プロジェクトについて</p>
+        <h2 class="about__h2">About Us</h2>
+        <p class="about__h2-jp">私たちについて</p>
+        <span class="rule about__rule"></span>
+        <div class="about__text">
+          <p class="t-en">Noto Now is a project of the Now Institute, developed in partnership with the City of Wajima, the USC School of Architecture, Rise-Kyoto, Nippon Design Center USA, and the University of Hiroshima.</p>
+          <p class="t-en">The project guides the city's recovery through an urban framework that restores spatial hierarchies, honors the craft district, and introduces structural performance where the old fabric was most vulnerable.</p>
+          <p class="jp jp-full">Noto NowはNow Instituteのプロジェクトで、輪島市、USC建築学部、Rise-Kyoto、Nippon Design Center USA、広島大学との協力で開発されました。このプロジェクトは、空間階層を回復し、工芸地区を尊重し、古い建物構造が最も脆弱だった場所に構造性能を導入する都市フレームワークを通じて、市の復興を導きます。</p>
+        </div>
+      </div>
+
+      <div class="about__media">
+        <div class="frame"><img data-img="about" alt="Traditional joinery, Wajima townhouse" /></div>
+        <div class="about__caption">
+          <span class="label t-en">Traditional joinery, Wajima townhouse</span>
+          <div class="carousel">
+            <button type="button" aria-label="Previous">&#8592;</button>
+            <span class="count">1 / 3</span>
+            <button type="button" aria-label="Next">&#8594;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- ======================= DAMAGE ESSAY ======================= -->
   <section class="damage">
@@ -102,43 +131,41 @@
 
       <div class="mosaic">
         <figure class="mosaic__cell mosaic__cell--tall">
-          <img data-img="hero" alt="Structural collapse" onerror="this.style.display='none'" />
+          <img data-img="hero" alt="Structural collapse" />
           <figcaption class="caption">
             <div class="caption__en t-en">roads collapse</div>
             <div class="caption__jp jp-full">道路が崩れる</div>
           </figcaption>
         </figure>
         <figure class="mosaic__cell">
-          <img data-img="fire" alt="Fire aftermath" onerror="this.style.display='none'" />
+          <img data-img="fire" alt="Fire aftermath" />
           <figcaption class="caption">
             <div class="caption__en t-en">Fire aftermath</div>
             <div class="caption__jp jp-full">火災後</div>
           </figcaption>
         </figure>
         <figure class="mosaic__cell">
-          <img data-img="urban" alt="Urban damage" onerror="this.style.display='none'" />
+          <img data-img="urban" alt="Urban damage" />
           <figcaption class="caption">
             <div class="caption__en t-en">Landslides</div>
             <div class="caption__jp jp-full">都市被害</div>
           </figcaption>
         </figure>
         <figure class="mosaic__cell">
-          <img data-img="empty" alt="Empty streets" onerror="this.style.display='none'" />
+          <img data-img="empty" alt="Empty streets" />
           <figcaption class="caption">
             <div class="caption__en t-en">Flooding</div>
             <div class="caption__jp jp-full">廃墟の街</div>
           </figcaption>
         </figure>
         <figure class="mosaic__cell">
-          <img data-img="coastal" alt="Coastal damage" onerror="this.style.display='none'" />
+          <img data-img="coastal" alt="Coastal damage" />
           <figcaption class="caption">
             <div class="caption__en t-en">Coastal damage</div>
             <div class="caption__jp jp-full">沿岸被害</div>
           </figcaption>
         </figure>
       </div>
-
-      <p class="damage__note t-en">Images document structural collapse, fire damage, and displacement across Wajima.</p>
     </div>
   </section>
 
@@ -150,120 +177,154 @@
         <p class="kicker">文化遺産と復興戦略 — Heritage-Driven Recovery</p>
         <h2 class="heritage__h2">Cultural economic engines</h2>
         <p class="heritage__h2-jp">文化が生む経済</p>
-        <p class="heritage__lead t-en">The Wajima Now framework is built from what makes Noto irreplaceable — its lacquerware tradition, its morning market, its Kiriko Festival.</p>
-        <p class="heritage__lead-jp jp-full">輪島ナウのフレームワークは、能登を特別なものにしているものから作られているんだ — 漆器の伝統、朝市、キリコ祭りだよ。</p>
+        <p class="heritage__lead t-en">Noto is an undervalued destination known for world-class food, UNESCO-recognized Wajima-nuri lacquerware, and standout sights like the Shiroyone Senmaida rice terraces and the Kiriko Festival — a rich blend of nature, tradition, and artistry.</p>
+        <p class="heritage__lead-jp jp-full">能登は、世界的に評価される食文化、ユネスコに登録された輪島塗、そして白米千枚田やキリコ祭りといった見どころで知られるまだあまり注目されていない観光地です — 自然、伝統、芸術が豊かに融合した場所です。</p>
       </div>
     </div>
 
-    <div class="container">
-      <div class="heritage__grid">
-        <article class="hcard">
-          <div class="hcard__img"><img data-img="nuri" alt="Wajima-nuri" onerror="this.style.display='none'" /></div>
-          <div class="hcard__body">
-            <div class="hcard__meta">
-              <span class="hcard__no">01</span>
-              <span class="line"></span>
-              <span class="hcard__when">1,200 years</span>
+    <div class="carousel-x" data-carousel data-per="3">
+      <div class="carousel-x__viewport" data-viewport>
+        <div class="carousel-x__track heritage__track" data-track>
+          <!-- 01 --><article class="hcard">
+            <div class="hcard__img"><img data-img="wagyu" alt="Wagyu Beef" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">01</span><span class="line"></span><span class="hcard__when">Global demand</span></div>
+              <h3 class="hcard__title">Wagyu Beef</h3>
+              <p class="hcard__title-jp">和牛</p>
+              <p class="hcard__text t-en">Though domestic beef consumption is declining, global demand for Wagyu remains high — presenting an opportunity to strengthen Noto Wagyu as a globally recognized brand.</p>
+              <p class="hcard__text-jp jp-full">国内の牛肉消費は減少しているものの、和牛に対する世界的な需要は依然として高く、能登牛を世界的に認知されたブランドとしてさらに強化する機会が生まれています。</p>
             </div>
-            <h3 class="hcard__title">Wajima-nuri</h3>
-            <p class="hcard__title-jp">輪島塗 — 1,200年の漆芸</p>
-            <p class="hcard__text t-en">One hundred and twenty individual stages of lacquer, passed hand to hand for twelve centuries. Wajima-nuri is not a product — it is a spatial and social system.</p>
-            <p class="hcard__text-jp jp-full">漆の百二十の工程が、十二世紀にわたり手から手へと受け継がれてきた。輪島塗は単なる製品ではなく、空間的かつ社会的なシステムである。</p>
-          </div>
-        </article>
-
-        <article class="hcard">
-          <div class="hcard__img"><img data-img="market" alt="The morning market" onerror="this.style.display='none'" /></div>
-          <div class="hcard__body">
-            <div class="hcard__meta">
-              <span class="hcard__no">02</span>
-              <span class="line"></span>
-              <span class="hcard__when">1,000 years</span>
+          </article>
+          <!-- 02 --><article class="hcard">
+            <div class="hcard__img"><img data-img="veg" alt="Vegetables, Rice, and Sake" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">02</span><span class="line"></span><span class="hcard__when">climate for vegetables</span></div>
+              <h3 class="hcard__title">Vegetables, Rice, and Sake</h3>
+              <p class="hcard__title-jp">野菜・米・酒</p>
+              <p class="hcard__text t-en">Noto's climate yields a diverse range of seasonal vegetables and the region's terraced rice fields reflect a deep rice-growing culture, producing naturally sweet, pleasantly sticky rice.</p>
+              <p class="hcard__text-jp jp-full">能登の気候は多様な季節の野菜を生み出し、この地域の棚田は深い米作りの文化を反映しており、自然に甘く、ほどよく粘りのある米を生産しています。</p>
             </div>
-            <h3 class="hcard__title">The morning market</h3>
-            <p class="hcard__title-jp">朝市 — 千年の市</p>
-            <p class="hcard__text t-en">The Asaichi opened every morning along 360 metres of the city center — rain, winter, festival, or ordinary Tuesday. It was the structure around which Wajima organised itself.</p>
-            <p class="hcard__text-jp jp-full">朝市は、雨の日も、冬も、祭りの日も、何でもない火曜日も、街の中心の360メートルにわたって毎朝開かれていた。輪島という街は、その市を軸にして自らを組み立てていた。</p>
-          </div>
-        </article>
-
-        <article class="hcard">
-          <div class="hcard__img"><img data-img="kiriko" alt="Kiriko Festival" onerror="this.style.display='none'" /></div>
-          <div class="hcard__body">
-            <div class="hcard__meta">
-              <span class="hcard__no">03</span>
-              <span class="line"></span>
-              <span class="hcard__when">Annual, July – October</span>
+          </article>
+          <!-- 03 --><article class="hcard">
+            <div class="hcard__img"><img data-img="seafood" alt="Seaweed and Seafood" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">03</span><span class="line"></span><span class="hcard__when">fishing grounds</span></div>
+              <h3 class="hcard__title">Seaweed and Seafood</h3>
+              <p class="hcard__title-jp">海藻と海産物</p>
+              <p class="hcard__text t-en">Noto's meeting of warm and cold currents produces rich, diverse catches year-round. The region's living ama diving tradition and clear, tidal waters further support a thriving seafood and seaweed industry.</p>
+              <p class="hcard__text-jp jp-full">能登の暖流と寒流の出会いは、年間を通じて豊かで多様な漁獲を生み出します。この地域の生きた海女の潜水伝統と透明で潮の流れがある海は、さらに海産物や海藻産業の繁栄を支えています。</p>
             </div>
-            <h3 class="hcard__title">Kiriko Festival</h3>
-            <p class="hcard__title-jp">キリコ祭り</p>
-            <p class="hcard__text t-en">Over 200 celebrations across the Noto Peninsula. Communities carry towering illuminated Kiriko floats that reach 15 metres tall — the festival is civic identity made physical.</p>
-            <p class="hcard__text-jp jp-full">能登半島では200以上の祭りが行われています。地域の人々は高さ15メートルに達する巨大な照明付きキリコ山車を担ぎます — この祭りは市民のアイデンティティが形となったものです。</p>
-          </div>
-        </article>
+          </article>
+          <!-- 04 --><article class="hcard">
+            <div class="hcard__img"><img data-img="nuri" alt="Wajima-nuri" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">04</span><span class="line"></span><span class="hcard__when">1,200 years</span></div>
+              <h3 class="hcard__title">Wajima-nuri</h3>
+              <p class="hcard__title-jp">輪島塗 — 1,200年の漆芸</p>
+              <p class="hcard__text t-en">One hundred and twenty individual stages of lacquer, passed hand to hand for twelve centuries. Wajima-nuri is not a product — it is a spatial and social system.</p>
+              <p class="hcard__text-jp jp-full">漆の百二十の工程が、十二世紀にわたり手から手へと受け継がれてきた。輪島塗は単なる製品ではなく、空間的かつ社会的なシステムである。</p>
+            </div>
+          </article>
+          <!-- 05 --><article class="hcard">
+            <div class="hcard__img"><img data-img="crafts" alt="Traditional Crafts from Ishikawa" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">05</span><span class="line"></span><span class="hcard__when">36 traditional crafts</span></div>
+              <h3 class="hcard__title">Traditional Crafts from Ishikawa</h3>
+              <p class="hcard__title-jp">石川県の伝統工芸品</p>
+              <p class="hcard__text t-en">Ishikawa Prefecture is home to 36 nationally designated traditional crafts, including Kaga Yuzen silk dyeing, Kutani ceramics, lacquerware, and gold leaf.</p>
+              <p class="hcard__text-jp jp-full">石川県には、加賀友禅の絹染め、九谷焼、漆器、金箔などを含む、全国で指定された36の伝統工芸品があります。</p>
+            </div>
+          </article>
+          <!-- 06 --><article class="hcard">
+            <div class="hcard__img"><img data-img="wood" alt="Forestry and Woodworking" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">06</span><span class="line"></span><span class="hcard__when">woodworking tradition</span></div>
+              <h3 class="hcard__title">Forestry and Woodworking</h3>
+              <p class="hcard__title-jp">林業と木工</p>
+              <p class="hcard__text t-en">Noto's dense forests supply high-quality cedar and Hinoki cypress, supporting a woodworking tradition rooted in the Edo period and prized for its precision craftsmanship and natural durability.</p>
+              <p class="hcard__text-jp jp-full">能登の密集した森林は高品質のスギやヒノキを供給し、江戸時代に根ざした木工の伝統を支え、その精密な職人技と自然な耐久性で評価されています。</p>
+            </div>
+          </article>
+          <!-- 07 --><article class="hcard">
+            <div class="hcard__img"><img data-img="kiriko" alt="Kiriko Festival" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">07</span><span class="line"></span><span class="hcard__when">Annual, July – October</span></div>
+              <h3 class="hcard__title">Kiriko Festival</h3>
+              <p class="hcard__title-jp">キリコ祭り</p>
+              <p class="hcard__text t-en">Over 200 celebrations across the Noto Peninsula. Communities carry towering illuminated Kiriko floats that reach 15 metres tall — the festival is civic identity made physical.</p>
+              <p class="hcard__text-jp jp-full">能登半島では200以上の祭りが行われています。地域の人々は高さ15メートルに達する巨大な照明付きキリコ山車を担ぎます — この祭りは市民のアイデンティティが形となったものです。</p>
+            </div>
+          </article>
+          <!-- 08 --><article class="hcard">
+            <div class="hcard__img"><img data-img="springs" alt="Hot Springs" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">08</span><span class="line"></span><span class="hcard__when">therapeutic retreats</span></div>
+              <h3 class="hcard__title">Hot Springs</h3>
+              <p class="hcard__title-jp">温泉</p>
+              <p class="hcard__text t-en">The Noto Peninsula offers a diverse range of hot spring inns, from Wakura Onsen — the peninsula's largest resort, with waters flowing for over 1,200 years — to the secluded Lamp no Yado.</p>
+              <p class="hcard__text-jp jp-full">能登半島には多様な温泉旅館があり、半島最大のリゾートである和倉温泉は1200年以上も湯が湧き続けており、また人里離れたランプの宿もあります。</p>
+            </div>
+          </article>
+          <!-- 09 --><article class="hcard">
+            <div class="hcard__img"><img data-img="senmaida" alt="Senmaida Rice Fields" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">09</span><span class="line"></span><span class="hcard__when">agricultural heritage</span></div>
+              <h3 class="hcard__title">Senmaida Rice Fields</h3>
+              <p class="hcard__title-jp">千枚田</p>
+              <p class="hcard__text t-en">Noto's 1,300-year-old rice terraces are proposed as a loop tourism site featuring farm stays and agricultural demonstrations to support preservation.</p>
+              <p class="hcard__text-jp jp-full">能登の1,300年の歴史を持つ棚田は、保存を支援するために、農業体験や農業デモンストレーションを特色としたループ型観光地として提案されています。</p>
+            </div>
+          </article>
+          <!-- 10 --><article class="hcard">
+            <div class="hcard__img"><img data-img="magaki" alt="Magaki Village" /></div>
+            <div class="hcard__body">
+              <div class="hcard__meta"><span class="hcard__no">10</span><span class="line"></span><span class="hcard__when">natural ventilation</span></div>
+              <h3 class="hcard__title">Magaki Village</h3>
+              <p class="hcard__title-jp">間垣の里</p>
+              <p class="hcard__text t-en">Magaki no Sato are villages in Wajima where towering bamboo fences filter harsh sea winds and summer sun, demonstrating a centuries-old blend of traditional design and sustainability.</p>
+              <p class="hcard__text-jp jp-full">曲垣の里は輪島にある村で、そびえ立つ竹垣が厳しい海風や夏の陽光を遮り、伝統的なデザインと持続可能性の何世紀も続く融合を示しています。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="container carousel-x__controls">
+        <span class="carousel-x__indicator" data-indicator>01 — 03 / 10</span>
+        <div class="carousel-x__btns">
+          <button type="button" class="cbtn" data-prev aria-label="Previous">&#8592;</button>
+          <button type="button" class="cbtn" data-next aria-label="Next">&#8594;</button>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ========================== ABOUT ========================== -->
-  <section class="about" id="about">
-    <div class="container about__top">
-      <div class="about__intro">
-        <p class="kicker">About the Project · プロジェクトについて</p>
-        <h2 class="about__h2">Recovery Solutions</h2>
-        <p class="about__h2-jp">復興への取り組み</p>
-        <span class="rule about__rule"></span>
-        <div class="about__text">
-          <p class="t-en">Wajima Now is the urban architecture framework commissioned by Ishikawa Prefecture to guide the city's recovery. It rejects two easy responses to disaster: the blank-slate redevelopment and the nostalgic replica.</p>
-          <p class="t-en">Instead, the framework reads the existing urban grain — recovering spatial hierarchies, honouring the craft district, and introducing structural performance where the old fabric was most vulnerable.</p>
-          <p class="jp jp-full">輪島今フレームワークは、都市の既存の構造を読み解き、空間的な位階を回復し、工芸地区を称え、旧来の構造が最も脆弱であった場所に構造的な性能を導入する。</p>
-        </div>
-      </div>
-
-      <div class="about__media">
-        <div class="frame"><img data-img="about" alt="Traditional joinery, Wajima townhouse" onerror="this.style.display='none'" /></div>
-        <div class="about__caption">
-          <span class="label t-en">Traditional joinery, Wajima townhouse</span>
-          <div class="carousel">
-            <button type="button" aria-label="Previous">&#8592;</button>
-            <span class="count">1 / 3</span>
-            <button type="button" aria-label="Next">&#8594;</button>
-          </div>
-        </div>
+  <!-- ================== ARCHITECTURAL SPECULATIONS ================== -->
+  <section class="spec" id="speculations">
+    <div class="container spec__head">
+      <span class="rule"></span>
+      <div>
+        <p class="kicker">新しいアクティベーションイニシアチブ — new activation initiative</p>
+        <h2 class="spec__h2">Architectural Speculations</h2>
+        <p class="spec__h2-jp">建築の構想</p>
       </div>
     </div>
 
-    <!-- Framework principles -->
-    <div class="principles">
-      <div class="container principles__inner">
-        <p class="kicker">Framework Principles · 設計原則</p>
-        <div class="principles__grid">
-          <div class="principle">
-            <div class="principle__no">01</div>
-            <h3 class="principle__title">Respect the existing grain</h3>
-            <p class="principle__title-jp">既存の街並みを敬う</p>
-            <span class="line"></span>
-            <p class="principle__text t-en">The framework reads Wajima's historic urban grain — recovering spatial hierarchies, alleyways, and plot divisions that encode centuries of social life.</p>
-            <p class="principle__text-jp jp-full">このフレームワークは、輪島の歴史的な都市の粒状性を読み取り、何世紀にもわたる社会生活を記録する空間の階層構造、路地、区画の分割を回復します。</p>
-          </div>
-          <div class="principle">
-            <div class="principle__no">02</div>
-            <h3 class="principle__title">Honour craft districts</h3>
-            <p class="principle__title-jp">工芸地区を称える</p>
-            <span class="line"></span>
-            <p class="principle__text t-en">The lacquerware district, the fishing harbour, the morning market corridor — each zone carries distinct material culture that recovery must protect and amplify.</p>
-            <p class="principle__text-jp jp-full">漆器地区、漁港、朝市の通り――それぞれのゾーンには、それぞれ異なる物質文化があり、その回復はそれを保護し増幅しなければならない。</p>
-          </div>
-          <div class="principle">
-            <div class="principle__no">03</div>
-            <h3 class="principle__title">Build for resilience</h3>
-            <p class="principle__title-jp">強靭性のために建てる</p>
-            <span class="line"></span>
-            <p class="principle__text t-en">New structures introduce seismic performance and flood resilience where the historic fabric was most vulnerable, without erasing the typologies that define the city.</p>
-            <p class="principle__text-jp jp-full">新しい建造物は、都市を特徴づける典型的な形態を消すことなく、歴史的構造が最も脆弱であった場所に地震への耐性と洪水への強靭性を導入します。</p>
+    <div class="spec__body">
+      <div class="spec__frame"><img data-img="flood" alt="Flood control villages" /></div>
+      <div class="spec__caption">
+        <div class="spec__caption-text">
+          <span class="spec__no">01</span>
+          <div>
+            <h3 class="spec__title">Flood control villages</h3>
+            <p class="spec__desc t-en">Mitigate mudslides by tier and dampen successive stages of river flow to the sea by creating diversionary ponds and lakes to slow the speed of the water. Leverage these lakes as resort towns for the tourist economy.</p>
           </div>
         </div>
+        <div class="spec__controls">
+          <span class="spec__indicator">01 — 11 / 11</span>
+          <button type="button" class="cbtn" aria-label="Previous">&#8592;</button>
+          <button type="button" class="cbtn" aria-label="Next">&#8594;</button>
+        </div>
       </div>
+      <div class="spec__progress"><span class="spec__progress-fill"></span></div>
     </div>
   </section>
 
@@ -281,28 +342,28 @@
 
       <div class="docs__grid">
         <article class="dcard">
-          <div class="dcard__img"><img data-img="remapping" alt="Coastal remapping" onerror="this.style.display='none'" /></div>
+          <div class="dcard__img"><img data-img="remapping" alt="Coastal remapping" /></div>
           <div class="dcard__body">
             <div class="dcard__meta">Geospatial · Apr 2024</div>
             <div class="dcard__title">Coastal remapping</div>
           </div>
         </article>
         <article class="dcard">
-          <div class="dcard__img"><img data-img="survey" alt="Street-level survey" onerror="this.style.display='none'" /></div>
+          <div class="dcard__img"><img data-img="survey" alt="Street-level survey" /></div>
           <div class="dcard__body">
             <div class="dcard__meta">Field record · Mar 2024</div>
             <div class="dcard__title">Street-level survey</div>
           </div>
         </article>
         <article class="dcard">
-          <div class="dcard__img"><img data-img="workshop" alt="Workshop documentation" onerror="this.style.display='none'" /></div>
+          <div class="dcard__img"><img data-img="workshop" alt="Workshop documentation" /></div>
           <div class="dcard__body">
             <div class="dcard__meta">Craft inventory · Feb 2024</div>
             <div class="dcard__title">Workshop documentation</div>
           </div>
         </article>
         <article class="dcard">
-          <div class="dcard__img"><img data-img="aerial" alt="Aerial survey grids" onerror="this.style.display='none'" /></div>
+          <div class="dcard__img"><img data-img="aerial" alt="Aerial survey grids" /></div>
           <div class="dcard__body">
             <div class="dcard__meta">Structural · Feb 2024</div>
             <div class="dcard__title">Aerial survey grids</div>
@@ -323,22 +384,30 @@
       </div>
       <div class="footer__cols">
         <div class="footer__col">
-          <h4>Project</h4>
-          <a href="#">Overview</a>
-          <a href="#">Framework</a>
-          <a href="#">Timeline</a>
+          <h4>about</h4>
+          <a href="#about">Overview</a>
+          <a href="#speculations">Projects</a>
         </div>
         <div class="footer__col">
-          <h4>Heritage</h4>
-          <a href="#">Wajima-nuri</a>
-          <a href="#">Morning Market</a>
-          <a href="#">Kiriko Festival</a>
+          <h4>history</h4>
+          <a href="#heritage">Overview</a>
+          <a href="#">Earthquake</a>
+          <a href="#heritage">Regional Attributes</a>
+          <a href="#">Site Images</a>
         </div>
         <div class="footer__col">
-          <h4>Contact</h4>
-          <a href="#">Ishikawa Prefecture</a>
-          <a href="#">Press</a>
-          <a href="#">Research Access</a>
+          <h4>design</h4>
+          <a href="#">Urban Planning</a>
+          <a href="#">Challenges</a>
+          <a href="#speculations">Strategies</a>
+          <a href="#">Architecture</a>
+        </div>
+        <div class="footer__col">
+          <h4>credits</h4>
+          <a href="#">Executive Producers</a>
+          <a href="#">Special Support</a>
+          <a href="#">Urban Planning Research</a>
+          <a href="#">Design &amp; Editing</a>
         </div>
       </div>
     </div>
@@ -351,55 +420,74 @@
   </footer>
 
   <script>
-    // Primary image sources: the live Figma export URLs.
-    // NOTE: Figma asset URLs are temporary (they expire ~7 days after export).
-    // If/when one stops loading, the onerror handler below automatically falls
-    // back to the matching local placeholder in /images, so the page never
-    // shows a broken image. For a permanent deployment, replace these with the
-    // exported photos in /images (see images/README.md).
+    // ---- Images -------------------------------------------------------------
+    // Live Figma export URLs where available; everything falls back to the
+    // matching local placeholder in /images (Figma URLs expire ~7 days out).
     var FIGMA = {
-      hero:      "https://www.figma.com/api/mcp/asset/a9098d22-bdca-4b94-8ecf-c4236b036e33",
-      fire:      "https://www.figma.com/api/mcp/asset/33a8d56a-3ec3-4b8e-8311-c5fbc375c3ff",
-      urban:     "https://www.figma.com/api/mcp/asset/807a7ee8-faaf-44fc-8777-39b56af65f7e",
-      empty:     "https://www.figma.com/api/mcp/asset/3683a8d2-a38b-47ae-b4e1-664ad6434f3b",
-      coastal:   "https://www.figma.com/api/mcp/asset/e6d8427d-8ef6-4132-ac53-7b0f5aebfde4",
-      nuri:      "https://www.figma.com/api/mcp/asset/481cd0f9-c310-4dec-b4c8-4c61b6fd4003",
-      market:    "https://www.figma.com/api/mcp/asset/c739b2cc-1d0f-40bb-a6cf-4301ae778691",
-      kiriko:    "https://www.figma.com/api/mcp/asset/8b950938-4862-4dad-a70e-94c7a00bf584",
-      about:     "https://www.figma.com/api/mcp/asset/0877db35-d17d-494e-8fab-b3a9899cb2c5",
-      remapping: "https://www.figma.com/api/mcp/asset/018d9551-0bf9-4869-b48d-0924f5dd4ae8",
-      survey:    "https://www.figma.com/api/mcp/asset/5bc49453-b6a3-4a48-a4c4-cdf855d82fda",
-      workshop:  "https://www.figma.com/api/mcp/asset/2600badd-7757-431c-aba3-3b319e0eff2c",
-      aerial:    "https://www.figma.com/api/mcp/asset/f98dda8d-ef04-4645-b51d-7f8492dcbc77"
+      hero:      "https://www.figma.com/api/mcp/asset/1f158ad7-f794-442f-ae69-1f4fcf678003",
+      about:     "https://www.figma.com/api/mcp/asset/4eec9c23-1c8c-43af-adae-63b402d1fe20",
+      fire:      "https://www.figma.com/api/mcp/asset/cd2b65a9-d9c8-4e38-b464-007942321728",
+      urban:     "https://www.figma.com/api/mcp/asset/8290c369-db0d-42ad-b7db-d66b2d93817c",
+      empty:     "https://www.figma.com/api/mcp/asset/c5a130c7-10a6-4ae0-a957-bef6726e07f1",
+      coastal:   "https://www.figma.com/api/mcp/asset/1fa0b188-b5f0-48e6-89e5-e7d229bc130c",
+      nuri:      "https://www.figma.com/api/mcp/asset/02db2231-c3c7-4595-84ba-d4a7f4ed57cd",
+      kiriko:    "https://www.figma.com/api/mcp/asset/81858fae-eabf-470f-9077-d47f15777288",
+      flood:     "https://www.figma.com/api/mcp/asset/144aa7d4-d142-488f-b847-5bf63a13aa77",
+      remapping: "https://www.figma.com/api/mcp/asset/b470bdae-7529-463a-ae03-d9f1fd1471fa",
+      survey:    "https://www.figma.com/api/mcp/asset/dcddeae3-63e6-4fe4-a988-d00c5ce6773b",
+      workshop:  "https://www.figma.com/api/mcp/asset/7835eaef-da29-4299-9811-3bc882cf878f",
+      aerial:    "https://www.figma.com/api/mcp/asset/f0f0fd20-2ad9-4a97-aa41-4d464df2c711"
     };
     document.querySelectorAll("img[data-img]").forEach(function (img) {
       var key = img.getAttribute("data-img");
-      img.onerror = function () {
-        img.onerror = null;               // avoid loops if the fallback also fails
-        img.src = "images/" + key + ".jpg"; // local placeholder fallback
-      };
-      if (FIGMA[key]) img.src = FIGMA[key];
+      img.onerror = function () { img.onerror = null; img.src = "images/" + key + ".jpg"; };
+      img.src = FIGMA[key] || ("images/" + key + ".jpg");
     });
 
-    // Language toggle: switch the whole page between two distinct modes.
-    // mode-en = English primary (clean, Japanese accents only)
-    // mode-jp = Japanese primary (English recedes, Japanese leads)
+    // ---- Language toggle ----------------------------------------------------
     (function () {
       var btn = document.getElementById("langToggle");
       if (!btn) return;
       var opts = btn.querySelectorAll(".lang-toggle__opt");
-      function setMode(jp) {
+      btn.addEventListener("click", function () {
+        var jp = !document.body.classList.contains("mode-jp");
         document.body.classList.toggle("mode-jp", jp);
         document.body.classList.toggle("mode-en", !jp);
         document.documentElement.lang = jp ? "ja" : "en";
         btn.setAttribute("aria-pressed", jp ? "true" : "false");
-        opts[0].classList.toggle("is-on", !jp); // EN
-        opts[1].classList.toggle("is-on", jp);  // 日本語
-      }
-      btn.addEventListener("click", function () {
-        setMode(!document.body.classList.contains("mode-jp"));
+        opts[0].classList.toggle("is-on", !jp);
+        opts[1].classList.toggle("is-on", jp);
       });
     })();
+
+    // ---- Horizontal carousel (Heritage) ------------------------------------
+    document.querySelectorAll("[data-carousel]").forEach(function (root) {
+      var viewport = root.querySelector("[data-viewport]");
+      var track = root.querySelector("[data-track]");
+      var cards = track.children;
+      var per = parseInt(root.getAttribute("data-per") || "3", 10);
+      var prev = root.querySelector("[data-prev]");
+      var next = root.querySelector("[data-next]");
+      var ind = root.querySelector("[data-indicator]");
+      var page = 0;
+      function pad(n) { return (n < 10 ? "0" : "") + n; }
+      function maxShift() { return Math.max(0, track.scrollWidth - viewport.clientWidth); }
+      function render() {
+        var pageW = viewport.clientWidth;
+        var shift = Math.min(page * pageW, maxShift());
+        track.style.transform = "translateX(" + (-shift) + "px)";
+        var start = page * per + 1;
+        var end = Math.min(start + per - 1, cards.length);
+        if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + cards.length;
+        if (prev) prev.disabled = page === 0;
+        if (next) next.disabled = shift >= maxShift() - 1;
+      }
+      var lastPage = Math.ceil(cards.length / per) - 1;
+      if (next) next.addEventListener("click", function () { page = Math.min(page + 1, lastPage); render(); });
+      if (prev) prev.addEventListener("click", function () { page = Math.max(page - 1, 0); render(); });
+      window.addEventListener("resize", render);
+      render();
+    });
   </script>
 </body>
 </html>
