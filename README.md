@@ -19,6 +19,7 @@ python3 -m http.server 8000
 | --- | --- |
 | `index.html` | Home page — hero, damage essay, heritage cards, about + framework principles, field documentation, footer |
 | `about.html` | About page — About Us section + "Noto Now 1" editorial card grid (the disaster / strategy / approach / goal) |
+| `history.html` | History page — "History of Noto" intro with an inline Noto Peninsula map, plus the Earthquake, Cultural economic engines, and Site Images sections |
 | `styles.css` | All styling (design tokens, layout, responsive breakpoints) |
 
 ## Design notes
