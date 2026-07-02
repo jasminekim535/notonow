@@ -469,16 +469,17 @@
       var ind = root.querySelector("[data-indicator]");
       var page = 0;
       function pad(n) { return (n < 10 ? "0" : "") + n; }
-      function maxShift() { return Math.max(0, track.scrollWidth - viewport.clientWidth); }
       function render() {
-        var pageW = viewport.clientWidth;
-        var shift = Math.min(page * pageW, maxShift());
+        var cardW = cards[0].getBoundingClientRect().width;
+        var pageW = cardW * per;
+        var maxShift = Math.max(0, track.scrollWidth - pageW);
+        var shift = Math.min(page * pageW, maxShift);
         track.style.transform = "translateX(" + (-shift) + "px)";
         var start = page * per + 1;
         var end = Math.min(start + per - 1, cards.length);
         if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + cards.length;
         if (prev) prev.disabled = page === 0;
-        if (next) next.disabled = shift >= maxShift() - 1;
+        if (next) next.disabled = shift >= maxShift - 1;
       }
       var lastPage = Math.ceil(cards.length / per) - 1;
       if (next) next.addEventListener("click", function () { page = Math.min(page + 1, lastPage); render(); });

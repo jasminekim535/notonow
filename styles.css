@@ -882,10 +882,10 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 .about__media .frame { height: 432px; }
 
 /* ---- Generic horizontal carousel (Heritage) ---- */
-.carousel-x { width: 100%; }
+.carousel-x { width: 100%; border-top: 1px solid rgba(27, 31, 42, 0.15); }
 .carousel-x__viewport {
   overflow: hidden;
-  border-top: 1px solid rgba(27, 31, 42, 0.15);
+  margin-left: var(--pad); /* indent cards from the left; bleed off the right */
 }
 .carousel-x__track {
   display: flex;
