@@ -892,7 +892,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   padding-top: 32px;
   padding-bottom: 24px;
 }
-.carousel-x__divider { height: 1px; background: rgba(27, 31, 42, 0.15); }
+.carousel-x__divider { height: 1px; background: rgba(27, 31, 42, 0.15); margin-bottom: 40px; }
 .carousel-x__viewport {
   overflow: hidden; /* contained by the .container wrapper for equal margins */
 }
@@ -902,7 +902,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* bottom scroll-progress bar with a black thumb */
-.carousel-x__progresswrap { padding-top: 32px; padding-bottom: 64px; }
+.carousel-x__progresswrap { padding-top: 48px; padding-bottom: 64px; }
 .carousel-x__progress {
   position: relative;
   height: 2px;
