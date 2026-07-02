@@ -21,6 +21,7 @@ python3 -m http.server 8000
 | `about.html` | About page — About Us section + "Noto Now 1" editorial card grid (the disaster / strategy / approach / goal) |
 | `history.html` | History page — "History of Noto" intro with an inline Noto Peninsula map, plus the Earthquake, Cultural economic engines, and Site Images sections |
 | `design.html` | Design page — the Foundation intro, three scales of design, challenges, strategies, the "Four Regional Strategies for Ishikawa" map, urban strategies for Wajima, and Architectural Speculations |
+| `credits.html` | Publication Credits page — executive producers, special support, design & editing, and urban planning research |
 | `styles.css` | All styling (design tokens, layout, responsive breakpoints) |
 
 ## Design notes
