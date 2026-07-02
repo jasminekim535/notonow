@@ -1281,3 +1281,206 @@ body.mode-jp .history-intro__body p {
     justify-content: flex-start;
   }
 }
+
+/* ============================================================
+   DESIGN PAGE (design.html)
+   ============================================================ */
+
+/* --- A · The Foundation (dark hero) --- */
+.dz-hero { background: var(--ink); }
+.dz-hero__inner { padding: 56px var(--pad) 64px; }
+.dz-hero__bar { display: flex; align-items: center; gap: 24px; padding-bottom: 56px; }
+.dz-hero__kicker {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.4); white-space: nowrap;
+}
+.dz-hero__line { flex: 1; height: 1px; background: rgba(255,255,255,0.12); }
+.dz-hero__source {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.25); white-space: nowrap;
+}
+.dz-hero__grid { display: grid; grid-template-columns: 1fr 1fr; }
+.dz-hero__left { padding-right: 64px; border-right: 1px solid rgba(255,255,255,0.1); }
+.dz-hero__label {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: #fff;
+}
+.dz-hero__h1 {
+  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-size: clamp(38px, 4.6vw, 62px); line-height: 1.07; letter-spacing: -0.5px;
+  color: #f5f2ec; margin: 32px 0 0;
+}
+.dz-hero__h1-jp { margin-top: 24px; font-size: 11px; line-height: 1.9; color: rgba(255,255,255,0.32); }
+.dz-hero__right { padding-left: 64px; }
+.dz-hero__item { padding: 32px 0; }
+.dz-hero__item + .dz-hero__item { border-top: 1px solid rgba(255,255,255,0.1); }
+.dz-hero__item:first-child { padding-top: 32px; }
+.dz-hero__item-head { display: flex; align-items: baseline; gap: 14px; }
+.dz-hero__no {
+  font-family: var(--sans); font-size: 9px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: #fff;
+}
+.dz-hero__item-title { font-family: var(--serif); font-style: italic; font-size: 22px; color: #f5f2ec; }
+.dz-hero__item-jp { font-size: 10px; color: rgba(255,255,255,0.32); }
+.dz-hero__item-body {
+  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  color: rgba(255,255,255,0.5); margin: 16px 0 0;
+}
+
+/* --- B · Three scales of design (dark) --- */
+.dz-scales { background: var(--ink); }
+.dz-scales__inner { padding: 0 var(--pad) 64px; }
+.dz-scales__divider { height: 1px; background: rgba(255,255,255,0.1); }
+.dz-scales__kicker {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.3); padding: 40px 0 0; margin: 0;
+}
+.dz-scales__grid { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 40px; }
+.dz-scale { padding: 24px 40px 24px 0; }
+.dz-scale + .dz-scale { border-left: 1px solid rgba(255,255,255,0.08); padding-left: 40px; }
+.dz-scale__no {
+  font-family: var(--sans); font-size: 9px; font-weight: 500; letter-spacing: 3px;
+  text-transform: uppercase; color: #fff;
+}
+.dz-scale__title {
+  font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 15px;
+  color: rgba(255,255,255,0.6); margin: 10px 0 0;
+}
+.dz-scale__desc {
+  font-family: var(--sans); font-size: 11px; line-height: 1.7;
+  color: rgba(255,255,255,0.3); margin: 6px 0 0;
+}
+
+/* --- C · Three challenges (light) --- */
+.dz-challenges { background: var(--paper); }
+.dz-chal__inner { padding: 48px var(--pad) 40px; }
+.dz-chal__list { margin-top: 40px; }
+.dz-chal-row {
+  position: relative; display: flex; align-items: center; gap: 40px;
+  border-top: 1px solid rgba(27,31,42,0.12); padding: 34px 0; overflow: hidden;
+}
+.dz-chal-row__no {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 2px;
+  color: rgba(27,31,42,0.4); flex: none; width: 24px;
+}
+.dz-chal-row__title {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(32px, 4.6vw, 52px);
+  line-height: 1.05; color: var(--ink); margin: 0;
+}
+.dz-chal-row__jp { margin: 6px 0 0; font-size: 11px; color: rgba(27,31,42,0.45); }
+.dz-chal-row__big {
+  position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+  font-family: var(--serif); font-style: italic; font-size: 120px; line-height: 1;
+  color: rgba(27,31,42,0.05); pointer-events: none;
+}
+
+/* --- D · Strategies (dark) --- */
+.dz-strategies { background: var(--ink); }
+.dz-strat__inner { padding: 48px var(--pad) 64px; }
+.dz-strat__kicker {
+  font-family: var(--sans); font-size: 10px; letter-spacing: 3.5px;
+  text-transform: uppercase; color: rgba(255,255,255,0.4); margin: 0;
+}
+.dz-strat__divider { height: 1px; background: rgba(255,255,255,0.15); margin: 34px 0 0; }
+.dz-strat__grid { display: grid; grid-template-columns: repeat(3, 1fr); }
+.dz-strat-col { padding: 32px 48px 48px 0; }
+.dz-strat-col + .dz-strat-col { border-left: 1px solid rgba(255,255,255,0.15); padding-left: 48px; }
+.dz-strat-col__no {
+  font-family: var(--sans); font-size: 9px; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,0.28);
+}
+.dz-strat-col__title {
+  font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 24px;
+  color: #f5f2ec; margin: 16px 0 0;
+}
+.dz-strat-col__sub { margin: 4px 0 0; font-size: 10px; color: rgba(255,255,255,0.28); }
+.dz-strat-col__rule { display: block; width: 20px; height: 1px; background: rgba(255,255,255,0.15); margin: 20px 0; }
+.dz-strat-col__body {
+  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  color: rgba(255,255,255,0.5); margin: 0;
+}
+.dz-strat-col__body.jp { font-size: 11px; line-height: 2; color: rgba(255,255,255,0.32); }
+
+/* --- E · Four Regional Strategies (map diagram) --- */
+.dz-regional { background: var(--paper); padding: 72px 0 88px; }
+.dz-regional__head { text-align: center; }
+.dz-regional__h2 {
+  font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 40px);
+  color: var(--ink); margin: 8px 0 0;
+}
+.dz-map {
+  position: relative; max-width: 940px; margin: 48px auto 0;
+  aspect-ratio: 820 / 635;
+}
+.dz-map__peninsula {
+  position: absolute; left: 26.8%; top: 6.3%; width: 39%; height: auto; display: block;
+}
+.dz-map__overlay { position: absolute; inset: 0; width: 100%; height: 100%; }
+.dz-map__card { position: absolute; width: 22%; }
+.dz-map__card--tl { left: 2%; top: 19%; }
+.dz-map__card--bl { left: 2%; top: 55%; }
+.dz-map__card--tr { left: 66%; top: 17%; }
+.dz-map__card--br { left: 66%; top: 54%; }
+.dz-map-card__head { display: flex; align-items: baseline; gap: 8px; }
+.dz-map-card__no { font-family: var(--sans); font-size: 9px; color: var(--red); }
+.dz-map-card__title {
+  font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
+  text-transform: uppercase; color: var(--ink);
+}
+.dz-map-card__jp { margin: 3px 0 0; font-size: 9px; color: rgba(27,31,42,0.45); }
+.dz-map-card__body {
+  font-family: var(--sans); font-size: 10px; line-height: 1.6;
+  color: rgba(27,31,42,0.6); margin: 8px 0 0;
+}
+
+/* --- F · Three urban strategies for Wajima (light image cards) --- */
+.dz-urban { background: var(--paper); }
+.dz-urban__inner { padding: 48px var(--pad) 64px; }
+.dz-urban__divider { height: 1px; background: rgba(27,31,42,0.15); margin: 32px 0 0; }
+.dz-urban__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.dz-urban-card {
+  display: flex; flex-direction: column;
+  background: rgba(255,255,255,0.6); border: 1px solid rgba(27,31,42,0.12);
+}
+.dz-urban-card__img { aspect-ratio: 396 / 340; overflow: hidden; background: var(--stone); }
+.dz-urban-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.dz-urban-card__body { padding: 28px; }
+.dz-urban-card__no {
+  font-family: var(--sans); font-size: 9px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--red);
+}
+.dz-urban-card__title {
+  font-family: var(--serif); font-style: italic; font-weight: 500; font-size: 24px;
+  color: var(--ink); margin: 12px 0 0;
+}
+.dz-urban-card__jp { margin: 4px 0 0; font-size: 10px; color: rgba(27,31,42,0.5); }
+.dz-urban-card__rule { display: block; width: 20px; height: 1px; background: rgba(27,31,42,0.15); margin: 20px 0; }
+.dz-urban-card__text {
+  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  color: rgba(27,31,42,0.7); margin: 0;
+}
+.dz-urban-card__text.jp { font-size: 11px; line-height: 2; color: rgba(27,31,42,0.5); }
+
+/* --- Design page responsive --- */
+@media (max-width: 900px) {
+  .dz-hero__grid { grid-template-columns: 1fr; }
+  .dz-hero__left { padding-right: 0; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 40px; }
+  .dz-hero__right { padding-left: 0; padding-top: 8px; }
+  .dz-scales__grid { grid-template-columns: 1fr; }
+  .dz-scale { padding: 24px 0; }
+  .dz-scale + .dz-scale { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); padding-left: 0; }
+  .dz-strat__grid { grid-template-columns: 1fr; }
+  .dz-strat-col { padding: 32px 0; }
+  .dz-strat-col + .dz-strat-col { border-left: none; border-top: 1px solid rgba(255,255,255,0.15); padding-left: 0; }
+  .dz-urban__grid { grid-template-columns: 1fr; }
+  /* stack the map diagram: peninsula on top, cards in a grid below */
+  .dz-map { position: static; aspect-ratio: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .dz-map__peninsula { position: static; inset: auto; grid-column: 1 / -1; width: 240px; margin: 0 auto; }
+  .dz-map__overlay { display: none; }
+  .dz-map__card { position: static; width: auto; }
+}
+@media (max-width: 560px) {
+  .dz-chal-row__big { font-size: 84px; }
+  .dz-map { grid-template-columns: 1fr; }
+  .dz-hero__source { display: none; }
+}
