@@ -893,8 +893,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 }
 .carousel-x__divider { height: 1px; background: rgba(27, 31, 42, 0.15); }
 .carousel-x__viewport {
-  overflow: hidden;
-  margin-left: var(--pad); /* indent cards from the left; bleed off the right */
+  overflow: hidden; /* contained by the .container wrapper for equal margins */
 }
 .carousel-x__track {
   display: flex;
