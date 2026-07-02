@@ -1211,6 +1211,14 @@ body.mode-jp .story-card__title-jp {
   justify-content: center;
 }
 .noto-map { width: 100%; max-width: 320px; height: auto; display: block; }
+.noto-map__contours path { fill: none; stroke: rgba(27, 31, 42, 0.1); stroke-width: 0.6; }
+.noto-map__coast {
+  fill: rgba(27, 31, 42, 0.015);
+  stroke: rgba(27, 31, 42, 0.6);
+  stroke-width: 1.1;
+  stroke-linejoin: round;
+}
+.noto-map__cape-jp { font-family: var(--jp); font-size: 4.6px; fill: rgba(27, 31, 42, 0.28); }
 .noto-map__cities circle { fill: var(--ink); }
 .noto-map__cities .en {
   font-family: var(--sans);
