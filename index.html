@@ -548,13 +548,18 @@
         desc.textContent = jp ? s.dj : s.d;
         desc.classList.toggle("jp", jp);
         ind.textContent = pad(i + 1) + " / " + slides.length;
-        fill.style.width = ((i + 1) / slides.length * 100) + "%";
+        var trackW = fill.parentElement.clientWidth;
+        var thumbW = (1 / slides.length) * trackW;
+        fill.style.width = thumbW + "px";
+        var pos = slides.length > 1 ? i / (slides.length - 1) : 0;
+        fill.style.transform = "translateX(" + (pos * (trackW - thumbW)) + "px)";
         prev.disabled = i === 0;
         next.disabled = i === slides.length - 1;
       }
       prev.addEventListener("click", function () { if (i > 0) { i--; show(); } });
       next.addEventListener("click", function () { if (i < slides.length - 1) { i++; show(); } });
       document.addEventListener("langchange", show);
+      window.addEventListener("resize", show);
       show();
     })();
   </script>

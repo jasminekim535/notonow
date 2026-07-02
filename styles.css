@@ -1027,16 +1027,18 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 }
 .spec__progress {
   margin: 0 0 64px;
-  height: 1px;
-  background: rgba(27, 31, 42, 0.1);
+  height: 2px;
+  background: rgba(27, 31, 42, 0.12);
   position: relative;
+  overflow: hidden;
 }
 .spec__progress-fill {
   position: absolute;
   left: 0; top: 0;
-  height: 1px;
-  width: 9.09%;
+  height: 2px;
+  width: 30%;
   background: var(--ink);
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s ease;
 }
 
 /* ---- Language modes for the new headings ---- */
