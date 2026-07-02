@@ -183,6 +183,14 @@
     </div>
 
     <div class="carousel-x" data-carousel data-per="3">
+      <div class="container carousel-x__topbar">
+        <span class="carousel-x__indicator" data-indicator>01 — 03 / 10</span>
+        <div class="carousel-x__btns">
+          <button type="button" class="cbtn" data-prev aria-label="Previous">&#8592;</button>
+          <button type="button" class="cbtn" data-next aria-label="Next">&#8594;</button>
+        </div>
+      </div>
+      <div class="carousel-x__divider"></div>
       <div class="carousel-x__viewport" data-viewport>
         <div class="carousel-x__track heritage__track" data-track>
           <!-- 01 --><article class="hcard">
@@ -287,12 +295,8 @@
           </article>
         </div>
       </div>
-      <div class="container carousel-x__controls">
-        <span class="carousel-x__indicator" data-indicator>01 — 03 / 10</span>
-        <div class="carousel-x__btns">
-          <button type="button" class="cbtn" data-prev aria-label="Previous">&#8592;</button>
-          <button type="button" class="cbtn" data-next aria-label="Next">&#8594;</button>
-        </div>
+      <div class="container carousel-x__progresswrap">
+        <div class="carousel-x__progress"><span class="carousel-x__thumb" data-thumb></span></div>
       </div>
     </div>
   </section>
@@ -467,6 +471,7 @@
       var prev = root.querySelector("[data-prev]");
       var next = root.querySelector("[data-next]");
       var ind = root.querySelector("[data-indicator]");
+      var thumb = root.querySelector("[data-thumb]");
       var page = 0;
       function pad(n) { return (n < 10 ? "0" : "") + n; }
       function render() {
@@ -480,6 +485,14 @@
         if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + cards.length;
         if (prev) prev.disabled = page === 0;
         if (next) next.disabled = shift >= maxShift - 1;
+        if (thumb) {
+          var frac = Math.min(1, per / cards.length);
+          var trackW = thumb.parentElement.clientWidth;
+          var thumbW = frac * trackW;
+          thumb.style.width = thumbW + "px";
+          var pos = maxShift > 0 ? shift / maxShift : 0;
+          thumb.style.transform = "translateX(" + (pos * (trackW - thumbW)) + "px)";
+        }
       }
       var lastPage = Math.ceil(cards.length / per) - 1;
       if (next) next.addEventListener("click", function () { page = Math.min(page + 1, lastPage); render(); });
