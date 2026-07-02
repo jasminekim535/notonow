@@ -1058,3 +1058,19 @@ body.mode-jp .spec__h2-jp { font-size: 32px; line-height: 1.2; color: var(--ink)
   .spec__caption-text { flex-direction: column; gap: 12px; }
   .footer__cols { gap: 32px; }
 }
+
+/* ---- Architectural Speculations: 2-up carousel cards ---- */
+.spec__track .hcard {
+  flex: 0 0 50%;
+  background: rgba(255, 255, 255, 0.55);
+  border-right: 1px solid rgba(27, 31, 42, 0.15);
+  border-bottom: none;
+}
+.spec__track .hcard__img { height: 360px; }
+/* spec cards are English-only in the design: keep them intact in JP mode */
+body.mode-jp .spec__track .t-en { display: block; }
+body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
+
+@media (max-width: 820px) {
+  .spec__track .hcard { flex-basis: 85%; }
+}
