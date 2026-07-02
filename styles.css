@@ -882,7 +882,16 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 .about__media .frame { height: 432px; }
 
 /* ---- Generic horizontal carousel (Heritage) ---- */
-.carousel-x { width: 100%; border-top: 1px solid rgba(27, 31, 42, 0.15); }
+.carousel-x { width: 100%; }
+.carousel-x__topbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  padding-top: 32px;
+  padding-bottom: 24px;
+}
+.carousel-x__divider { height: 1px; background: rgba(27, 31, 42, 0.15); }
 .carousel-x__viewport {
   overflow: hidden;
   margin-left: var(--pad); /* indent cards from the left; bleed off the right */
@@ -891,6 +900,22 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   display: flex;
   flex-wrap: nowrap;
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* bottom scroll-progress bar with a black thumb */
+.carousel-x__progresswrap { padding-top: 32px; padding-bottom: 64px; }
+.carousel-x__progress {
+  position: relative;
+  height: 2px;
+  background: rgba(27, 31, 42, 0.12);
+  overflow: hidden;
+}
+.carousel-x__thumb {
+  position: absolute;
+  left: 0; top: 0;
+  height: 2px;
+  width: 30%;
+  background: var(--ink);
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s ease;
 }
 .carousel-x__controls {
   display: flex;
