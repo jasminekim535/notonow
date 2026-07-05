@@ -1602,10 +1602,9 @@ body.mode-jp .dz-urban-card__text.jp { font-size: 13px; line-height: 2; color: r
 }
 .credits__divider { display: block; height: 1px; background: rgba(27,31,42,0.15); margin: 28px 0 0; }
 .credits__grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
-  margin-top: 56px;
+  display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; row-gap: 72px;
+  margin-top: 56px; align-items: start;
 }
-.credits__col { display: flex; flex-direction: column; gap: 72px; }
 
 .credit-group__head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; }
 .credit-group__no {
@@ -1646,9 +1645,7 @@ body.mode-jp .credit-group__title { font-size: 15px; opacity: 0.55; }
 body.mode-jp .credit-group__jp { font-size: 18px; color: var(--ink); }
 
 @media (max-width: 820px) {
-  .credits__grid { grid-template-columns: 1fr; gap: 0; }
-  .credits__col { gap: 64px; }
-  .credits__col + .credits__col { margin-top: 64px; }
+  .credits__grid { grid-template-columns: 1fr; row-gap: 64px; }
 }
 @media (max-width: 480px) {
   .credit { gap: 14px; }
