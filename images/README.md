@@ -17,13 +17,6 @@ needed). The mapping lives in the `IMAGES` object near the bottom of
 | `market.jpg` | Heritage card 02 — the morning market | ~920 × 740 |
 | `kiriko.jpg` | Heritage card 03 — Kiriko Festival | ~920 × 740 |
 | `about.jpg` | About section — traditional joinery, Wajima townhouse | ~1120 × 800 |
-| `cherry.jpg` | Design page — Flood Control (river / cherry blossoms) | ~600 × 520 |
-| `ruin.jpg` | Design page — Earthquake & Fire Response (ruined building) | ~600 × 520 |
-| `tea.jpg` | Design page — Cultural Route (traditional tea) | ~600 × 520 |
-| `disaster.jpg` | About page · Noto Now 1 — the disaster (earthquake damage) | ~600 × 300 |
-| `strategy.jpg` | About page · Noto Now 1 — the strategy (coastal community) | ~600 × 300 |
-| `approach.jpg` | About page · Noto Now 1 — the approach (urban planning) | ~600 × 300 |
-| `goal.jpg` | About page · Noto Now 1 — the goal (resilient waterfront) | ~600 × 300 |
 | `remapping.jpg` | Documentation — coastal remapping | ~600 × 440 |
 | `survey.jpg` | Documentation — street-level survey | ~600 × 440 |
 | `workshop.jpg` | Documentation — workshop documentation | ~600 × 440 |
