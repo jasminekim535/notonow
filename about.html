@@ -79,7 +79,7 @@
           <div class="story-card__img"><img data-img="disaster" alt="The disaster — earthquake damage in Wajima" /></div>
           <div class="story-card__body">
             <p class="story-card__no">01</p>
-            <h3 class="story-card__title">The disaster</h3>
+            <h3 class="story-card__title">The Disaster</h3>
             <p class="story-card__title-jp jp">災害</p>
             <span class="story-card__rule"></span>
             <p class="story-card__text t-en">On January 1, 2024, a devastating 7.6 magnitude earthquake struck Ishikawa Prefecture's Noto Peninsula, with Wajima and Suzu among the hardest-hit communities. Wajima endured cascading disasters — fires, floods, and mudslides — that compounded recovery challenges.</p>
@@ -91,7 +91,7 @@
           <div class="story-card__img"><img data-img="strategy" alt="The strategy — coastal community" /></div>
           <div class="story-card__body">
             <p class="story-card__no">02</p>
-            <h3 class="story-card__title">The strategy</h3>
+            <h3 class="story-card__title">The Strategy</h3>
             <p class="story-card__title-jp jp">戦略</p>
             <span class="story-card__rule"></span>
             <p class="story-card__text t-en">The NOW Institute proposes a comprehensive resilience strategy integrating disaster-resistant master planning with economic revitalization through cultural assets: Wajima lacquerware, the Kiriko festival, and world-class agriculture including seafood and Wagyu beef.</p>
@@ -103,7 +103,7 @@
           <div class="story-card__img"><img data-img="approach" alt="The approach — urban planning scales" /></div>
           <div class="story-card__body">
             <p class="story-card__no">03</p>
-            <h3 class="story-card__title">The approach</h3>
+            <h3 class="story-card__title">The Approach</h3>
             <p class="story-card__title-jp jp">アプローチ</p>
             <span class="story-card__rule"></span>
             <p class="story-card__text t-en">This publication presents an integrated approach leveraging Oku-Noto's heritage to catalyze spatial disaster planning across three scales: regional planning, urban design, architectural speculations.</p>
@@ -115,7 +115,7 @@
           <div class="story-card__img"><img data-img="goal" alt="The goal — resilient waterfront community" /></div>
           <div class="story-card__body">
             <p class="story-card__no">04</p>
-            <h3 class="story-card__title">The goal</h3>
+            <h3 class="story-card__title">The Goal</h3>
             <p class="story-card__title-jp jp">目標</p>
             <span class="story-card__rule"></span>
             <p class="story-card__text t-en">By grounding recovery in place-specific cultural and economic strengths, the strategy aims to rebuild community resilience while preserving what makes Oku-Noto and the cities of Wajima and Suzu distinctive.</p>
@@ -175,15 +175,8 @@
 
   <script>
     // ---- Images -------------------------------------------------------------
-    // Live Figma export URLs where available; everything falls back to the
-    // matching local placeholder in /images (Figma URLs expire ~7 days out).
-    var FIGMA = {
-      about:    "https://www.figma.com/api/mcp/asset/073072f6-46e5-4cc9-94c3-a204b36fd7e3",
-      disaster: "https://www.figma.com/api/mcp/asset/6051b42a-5243-4b6c-af58-f65b2acdbe91",
-      strategy: "https://www.figma.com/api/mcp/asset/3dcec760-a16d-417b-90a6-c1dfe36041e5",
-      approach: "https://www.figma.com/api/mcp/asset/026ae7b7-bd31-4519-9587-ade8e8254b73",
-      goal:     "https://www.figma.com/api/mcp/asset/abb60f8b-3606-4892-b126-72eb2679db33"
-    };
+    // All imagery is served from the uploaded photos in /images.
+    var FIGMA = {};
     document.querySelectorAll("img[data-img]").forEach(function (img) {
       var key = img.getAttribute("data-img");
       img.onerror = function () { img.onerror = null; img.src = "images/" + key + ".jpg"; };
