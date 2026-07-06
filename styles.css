@@ -420,6 +420,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   background: #232734;
 }
 .mosaic__cell--tall { grid-row: 1 / span 2; }
+.mosaic__cell--wide { grid-column: span 2; }
 .mosaic__cell img {
   position: absolute;
   inset: 0;
