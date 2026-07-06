@@ -407,24 +407,31 @@
     document.querySelectorAll("[data-carousel]").forEach(function (root) {
       var track = root.querySelector("[data-track]");
       var cards = track.children;
-      var per = parseInt(root.getAttribute("data-per") || "3", 10);
       var prev = root.querySelector("[data-prev]");
       var next = root.querySelector("[data-next]");
       var ind = root.querySelector("[data-indicator]");
       var thumb = root.querySelector("[data-thumb]");
       var page = 0;
       function pad(n) { return (n < 10 ? "0" : "") + n; }
+      // How many whole cards fit in the viewport right now (responsive).
+      function perView() {
+        var cardW = cards[0].getBoundingClientRect().width || 1;
+        return Math.max(1, Math.round(viewport.getBoundingClientRect().width / cardW));
+      }
       function render() {
+        var per = perView();
         var cardW = cards[0].getBoundingClientRect().width;
-        var pageW = cardW * per;
-        var maxShift = Math.max(0, track.scrollWidth - pageW);
-        var shift = Math.min(page * pageW, maxShift);
+        var lastPage = Math.max(0, Math.ceil(cards.length / per) - 1);
+        if (page > lastPage) page = lastPage;
+        if (page < 0) page = 0;
+        var maxShift = Math.max(0, track.scrollWidth - viewport.getBoundingClientRect().width);
+        var shift = Math.min(page * cardW * per, maxShift);
         track.style.transform = "translateX(" + (-shift) + "px)";
         var start = page * per + 1;
         var end = Math.min(start + per - 1, cards.length);
         if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + cards.length;
         if (prev) prev.disabled = page === 0;
-        if (next) next.disabled = shift >= maxShift - 1;
+        if (next) next.disabled = page >= lastPage;
         if (thumb) {
           var frac = Math.min(1, per / cards.length);
           var trackW = thumb.parentElement.clientWidth;
@@ -434,9 +441,8 @@
           thumb.style.transform = "translateX(" + (pos * (trackW - thumbW)) + "px)";
         }
       }
-      var lastPage = Math.ceil(cards.length / per) - 1;
-      if (next) next.addEventListener("click", function () { page = Math.min(page + 1, lastPage); render(); });
-      if (prev) prev.addEventListener("click", function () { page = Math.max(page - 1, 0); render(); });
+      if (next) next.addEventListener("click", function () { page = page + 1; render(); });
+      if (prev) prev.addEventListener("click", function () { page = page - 1; render(); });
       window.addEventListener("resize", render);
       render();
     });

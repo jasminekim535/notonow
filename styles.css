@@ -76,7 +76,7 @@ figure, figcaption { margin: 0; }
 .hero {
   position: relative;
   background: var(--ink);
-  min-height: 600px;
+  min-height: 855px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -255,7 +255,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   position: relative;
   z-index: 2;
   margin-top: auto;
-  padding-bottom: 96px;
+  padding-bottom: 156px;
 }
 
 .hero__meta {
@@ -855,6 +855,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 
 @media (max-width: 820px) {
   :root { --pad: 24px; }
+  .hero { min-height: 560px; }
+  .hero__content { padding-bottom: 72px; }
   .nav__inner { flex-direction: column; height: auto; gap: 12px; padding: 14px 0; }
   .nav__right { width: 100%; flex-wrap: wrap; justify-content: center; gap: 14px 24px; }
   .nav__links { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
@@ -954,7 +956,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 /* Heritage cards become fixed-width carousel items (3 per view) */
 .heritage__track .hcard {
   flex: 0 0 33.3333%;
-  background: rgba(255, 255, 255, 0.55);
+  background: #fff;
   border-right: 1px solid rgba(27, 31, 42, 0.15);
   border-bottom: none;
 }
@@ -1548,7 +1550,7 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
   /* stack the map: keep the full diagram (map + route + dots) as one figure,
      then flow the four cards below it — nothing is hidden. */
   .dz-map { position: static; aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 28px; }
-  .dz-map__figure { position: relative; inset: auto; width: 320px; max-width: 88%; aspect-ratio: 820 / 635; }
+  .dz-map__figure { position: relative; inset: auto; width: 100%; max-width: 520px; aspect-ratio: 820 / 635; }
   /* stacked: drop the connector lines, keep only the red route */
   .dz-map__overlay--full { display: none; }
   .dz-map__overlay--route { display: block; }
