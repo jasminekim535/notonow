@@ -393,21 +393,8 @@
 
   <script>
     // ---- Images -------------------------------------------------------------
-    // Live Figma export URLs where available; everything falls back to the
-    // matching local placeholder in /images (Figma URLs expire ~7 days out).
-    var FIGMA = {
-      hero:      "https://www.figma.com/api/mcp/asset/1f158ad7-f794-442f-ae69-1f4fcf678003",
-      about:     "https://www.figma.com/api/mcp/asset/4eec9c23-1c8c-43af-adae-63b402d1fe20",
-      fire:      "https://www.figma.com/api/mcp/asset/cd2b65a9-d9c8-4e38-b464-007942321728",
-      urban:     "https://www.figma.com/api/mcp/asset/8290c369-db0d-42ad-b7db-d66b2d93817c",
-      empty:     "https://www.figma.com/api/mcp/asset/c5a130c7-10a6-4ae0-a957-bef6726e07f1",
-      coastal:   "https://www.figma.com/api/mcp/asset/1fa0b188-b5f0-48e6-89e5-e7d229bc130c",
-      flood:     "https://www.figma.com/api/mcp/asset/144aa7d4-d142-488f-b847-5bf63a13aa77",
-      remapping: "https://www.figma.com/api/mcp/asset/36ab2eae-37e2-4462-b887-6bd1005eeb2d",
-      survey:    "https://www.figma.com/api/mcp/asset/cd188f4e-fe33-4ce1-8350-5ee495c713dc",
-      workshop:  "https://www.figma.com/api/mcp/asset/c54b9270-2634-4eea-a6f3-caa8c786780c",
-      aerial:    "https://www.figma.com/api/mcp/asset/9320e410-871e-48e2-a867-594cd5b7ff5f"
-    };
+    // All imagery is served from the uploaded photos in /images.
+    var FIGMA = {};
     document.querySelectorAll("img[data-img]").forEach(function (img) {
       var key = img.getAttribute("data-img");
       img.onerror = function () { img.onerror = null; img.src = "images/" + key + ".jpg"; };
