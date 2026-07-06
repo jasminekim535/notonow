@@ -408,8 +408,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 /* image mosaic */
 .mosaic {
   display: grid;
-  grid-template-columns: 486px 1fr 1fr;
-  grid-template-rows: 280px 240px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 340px);
   gap: 1px;
   background: rgba(255, 255, 255, 0.06);
   margin-top: 12px;
@@ -419,8 +419,6 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   overflow: hidden;
   background: #232734;
 }
-.mosaic__cell--tall { grid-row: 1 / span 2; }
-.mosaic__cell--wide { grid-column: span 2; }
 .mosaic__cell img {
   position: absolute;
   inset: 0;
@@ -841,9 +839,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   .stats { flex: none; width: 378px; max-width: 100%; }
   .mosaic {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: repeat(2, 280px);
   }
-  .mosaic__cell--tall { grid-row: auto; grid-column: 1 / span 2; height: 360px; }
   .about__top { grid-template-columns: 1fr; gap: 48px; }
   .docs__grid { grid-template-columns: 1fr 1fr; }
 }
@@ -860,8 +857,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 }
 
 @media (max-width: 560px) {
-  .mosaic { grid-template-columns: 1fr; }
-  .mosaic__cell--tall { grid-column: auto; }
+  .mosaic { grid-template-columns: 1fr; grid-template-rows: repeat(4, 240px); }
   .stats { grid-template-columns: 1fr 1fr; width: 100%; }
   .docs__grid { grid-template-columns: 1fr; }
   .damage__bar { padding: 16px 24px; }
