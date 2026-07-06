@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="mode-en">
+  <script>try{if(localStorage.getItem('nn-lang')==='jp'){document.body.className='mode-jp';document.documentElement.lang='ja';}}catch(e){}</script>
 
   <!-- ============================ NAV ============================ -->
   <nav class="nav nav--solid">
@@ -330,34 +331,12 @@
         <p class="desc t-en">Urban architecture framework commissioned by Ishikawa Prefecture for the recovery of Noto.</p>
         <p class="desc jp jp-full">石川県から委託された、能登の復興のための都市建築フレームワーク。</p>
       </div>
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h4><span class="t-en">about</span><span class="jp jp-full">約</span></h4>
-          <a href="about.html"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
-          <a href="design.html#speculations"><span class="t-en">Projects</span><span class="jp jp-full">プロジェクト</span></a>
-        </div>
-        <div class="footer__col">
-          <h4><span class="t-en">history</span><span class="jp jp-full">歴史</span></h4>
-          <a href="history.html"><span class="t-en">Overview</span><span class="jp jp-full">概要</span></a>
-          <a href="history.html"><span class="t-en">Earthquake</span><span class="jp jp-full">地震</span></a>
-          <a href="history.html#heritage"><span class="t-en">Regional Attributes</span><span class="jp jp-full">地域の特性</span></a>
-          <a href="history.html#documentation"><span class="t-en">Site Images</span><span class="jp jp-full">現場写真</span></a>
-        </div>
-        <div class="footer__col">
-          <h4><span class="t-en">design</span><span class="jp jp-full">デザイン</span></h4>
-          <a href="design.html"><span class="t-en">Urban Planning</span><span class="jp jp-full">都市計画</span></a>
-          <a href="design.html"><span class="t-en">Challenges</span><span class="jp jp-full">課題</span></a>
-          <a href="design.html"><span class="t-en">Strategies</span><span class="jp jp-full">戦略</span></a>
-          <a href="design.html#speculations"><span class="t-en">Architecture</span><span class="jp jp-full">建築</span></a>
-        </div>
-        <div class="footer__col">
-          <h4><span class="t-en">credits</span><span class="jp jp-full">クレジット</span></h4>
-          <a href="credits.html"><span class="t-en">Executive Producers</span><span class="jp jp-full">エグゼクティブプロデューサー</span></a>
-          <a href="credits.html"><span class="t-en">Special Support</span><span class="jp jp-full">特別協力</span></a>
-          <a href="credits.html"><span class="t-en">Urban Planning Research</span><span class="jp jp-full">都市計画リサーチ</span></a>
-          <a href="credits.html"><span class="t-en">Design &amp; Editing</span><span class="jp jp-full">デザインと編集</span></a>
-        </div>
-      </div>
+            <nav class="footer__nav">
+        <a href="about.html"><span class="t-en">about</span><span class="jp jp-full">約</span></a>
+        <a href="history.html"><span class="t-en">history</span><span class="jp jp-full">歴史</span></a>
+        <a href="design.html"><span class="t-en">design</span><span class="jp jp-full">デザイン</span></a>
+        <a href="credits.html"><span class="t-en">credits</span><span class="jp jp-full">クレジット</span></a>
+      </nav>
     </div>
     <div class="footer__bar">
       <div class="container footer__bar-inner">
@@ -378,18 +357,24 @@
 
     // ---- Language toggle ----
     (function () {
+      var KEY = "nn-lang";
       var btn = document.getElementById("langToggle");
-      if (!btn) return;
-      var opts = btn.querySelectorAll(".lang-toggle__opt");
-      btn.addEventListener("click", function () {
-        var jp = !document.body.classList.contains("mode-jp");
+      var opts = btn ? btn.querySelectorAll(".lang-toggle__opt") : [];
+      function apply(jp, save) {
         document.body.classList.toggle("mode-jp", jp);
         document.body.classList.toggle("mode-en", !jp);
         document.documentElement.lang = jp ? "ja" : "en";
-        btn.setAttribute("aria-pressed", jp ? "true" : "false");
-        opts[0].classList.toggle("is-on", !jp);
-        opts[1].classList.toggle("is-on", jp);
+        if (btn) {
+          btn.setAttribute("aria-pressed", jp ? "true" : "false");
+          opts[0].classList.toggle("is-on", !jp);
+          opts[1].classList.toggle("is-on", jp);
+        }
+        if (save) { try { localStorage.setItem(KEY, jp ? "jp" : "en"); } catch (e) {} }
         document.dispatchEvent(new Event("langchange"));
+      }
+      apply(document.body.classList.contains("mode-jp"), false);
+      if (btn) btn.addEventListener("click", function () {
+        apply(!document.body.classList.contains("mode-jp"), true);
       });
     })();
 
