@@ -835,8 +835,9 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1100px) {
-  .damage__cols { flex-direction: column; }
-  .stats { flex: none; width: 378px; max-width: 100%; }
+  .damage__cols { flex-direction: column; gap: 32px; }
+  .damage__text { flex: none; max-width: 640px; }
+  .stats { flex: none; width: 378px; max-width: 100%; margin-top: 0; }
   .mosaic {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 280px);
@@ -1046,6 +1047,7 @@ body.mode-jp .spec__h2-jp { font-size: 32px; line-height: 1.2; color: var(--ink)
 @media (max-width: 1100px) {
   .heritage__track .hcard { flex-basis: 50%; }
   .spec__caption { flex-direction: column; }
+  .spec__controls { align-self: flex-end; }
 }
 @media (max-width: 820px) {
   .heritage__track .hcard { flex-basis: 85%; }
