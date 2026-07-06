@@ -1537,10 +1537,10 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 .dz-urban-card__text.jp { font-size: 11px; line-height: 2; color: rgba(27,31,42,0.5); }
 
 /* --- G · Suzu: Disaster Response Plan (text left, image right) --- */
-.dz-suzu { background: var(--paper); }
+.dz-suzu { background: var(--paper); border-top: 1px solid rgba(27, 31, 42, 0.12); }
 .dz-suzu__inner {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
-  padding: 8px var(--pad) 80px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start;
+  padding: 88px var(--pad) 104px;
 }
 .dz-suzu__title {
   font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.4vw, 40px);
