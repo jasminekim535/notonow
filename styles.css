@@ -989,7 +989,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   color: rgba(27, 31, 42, 0.6);
 }
 .spec__frame {
-  height: 500px;
+  aspect-ratio: 16 / 9;
+  max-height: 640px;
   overflow: hidden;
   background: #20242e;
 }
