@@ -1540,7 +1540,7 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 .dz-suzu { background: var(--paper); }
 .dz-suzu__inner {
   display: grid; grid-template-columns: 1fr 1.05fr; gap: 80px; align-items: start;
-  padding: 88px var(--pad) 104px;
+  padding: 72px var(--pad) 88px;
 }
 .dz-suzu__text { max-width: 520px; }
 .dz-suzu__title {
