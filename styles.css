@@ -574,6 +574,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   gap: 80px;
   padding: 80px var(--pad);
 }
+.about__top--textonly { grid-template-columns: 1fr; }
+.about__top--textonly .about__intro { max-width: 760px; }
 .about__h2 {
   font-family: var(--serif);
   font-weight: 400;
