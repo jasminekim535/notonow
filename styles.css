@@ -1207,8 +1207,8 @@ body.mode-jp .story-card__title-jp {
 .history-intro__body p {
   font-family: var(--sans);
   font-weight: 300;
-  font-size: 16px;
-  line-height: 1.78;
+  font-size: 15px;
+  line-height: 1.8;
   color: rgba(27, 31, 42, 0.62);
   margin: 0 0 20px;
 }
