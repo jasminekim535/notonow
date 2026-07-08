@@ -1694,4 +1694,7 @@ body.mode-jp .credit-group__jp { font-size: 28px; color: var(--ink); }
 @media (max-width: 480px) {
   .credit { gap: 14px; }
   .credit__jp { font-size: 11px; }
+  /* JP mode: let the long Japanese names wrap instead of overflowing */
+  body.mode-jp .credit__jp { font-size: 15px; white-space: normal; }
+  body.mode-jp .credit-group__jp { font-size: 20px; }
 }
