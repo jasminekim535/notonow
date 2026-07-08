@@ -405,6 +405,7 @@
 
     // ---- Horizontal carousel (Heritage) ------------------------------------
     document.querySelectorAll("[data-carousel]").forEach(function (root) {
+      var viewport = root.querySelector("[data-viewport]");
       var track = root.querySelector("[data-track]");
       var cards = track.children;
       var prev = root.querySelector("[data-prev]");
