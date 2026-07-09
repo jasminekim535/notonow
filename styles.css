@@ -956,7 +956,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
 
 /* Heritage cards become fixed-width carousel items (3 per view) */
 .heritage__track .hcard {
-  flex: 0 0 33.3333%;
+  flex: 0 0 calc(100% / 3 + 1px); /* +1px so the next card is fully clipped (no subpixel sliver) */
   background: #fff;
   border-right: 1px solid rgba(27, 31, 42, 0.15);
   border-bottom: none;
@@ -1058,12 +1058,12 @@ body.mode-jp .spec__h2-jp { font-size: 32px; line-height: 1.2; color: var(--ink)
 
 /* ---- Responsive for the new sections ---- */
 @media (max-width: 1100px) {
-  .heritage__track .hcard { flex-basis: 50%; }
+  .heritage__track .hcard { flex-basis: calc(50% + 1px); }
   .spec__caption { flex-direction: column; }
   .spec__controls { align-self: flex-end; }
 }
 @media (max-width: 820px) {
-  .heritage__track .hcard { flex-basis: 100%; }
+  .heritage__track .hcard { flex-basis: calc(100% + 1px); }
   .spec__caption-text { flex-direction: column; gap: 12px; }
   .footer__cols { gap: 32px; }
 }
