@@ -467,7 +467,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   display: flex;
   gap: 32px;
   align-items: flex-start;
-  padding: 80px var(--pad) 44px;
+  padding: 80px var(--pad) 0;
 }
 .heritage__intro .rule { margin-top: 12px; flex: none; }
 .heritage__intro-body { max-width: 640px; }
@@ -894,8 +894,8 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   align-items: center;
   justify-content: flex-end;
   gap: 16px;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 4px;
+  padding-bottom: 20px;
 }
 .carousel-x__divider { height: 1px; background: rgba(27, 31, 42, 0.15); margin-bottom: 40px; }
 .carousel-x__viewport {
