@@ -467,7 +467,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   display: flex;
   gap: 32px;
   align-items: flex-start;
-  padding: 80px var(--pad) 8px;
+  padding: 80px var(--pad) 44px;
 }
 .heritage__intro .rule { margin-top: 12px; flex: none; }
 .heritage__intro-body { max-width: 640px; }
