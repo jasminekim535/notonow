@@ -777,18 +777,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   padding: 56px var(--pad);
 }
 .footer__brand { max-width: 280px; }
-.footer__brand .name {
-  font-size: 11px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.7);
-}
-.footer__brand .jp {
-  margin-top: 4px;
-  font-family: var(--jp);
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.7);
-}
+.footer__logo { height: 19px; }
 .footer__brand .rule {
   display: block;
   width: 24px;
