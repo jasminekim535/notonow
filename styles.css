@@ -1511,12 +1511,8 @@ body.mode-jp .dz-map-card__jp { font-size: 12px; color: var(--ink); margin-top: 
 body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: rgba(27,31,42,0.7); }
 
 /* --- F · Three urban strategies for Wajima (light image cards) --- */
-.dz-urban {
-  background: #e9e3da;
-  border-top: 1px solid rgba(27, 31, 42, 0.12);
-  border-bottom: 1px solid rgba(27, 31, 42, 0.12);
-}
-.dz-urban__inner { padding: 56px var(--pad) 72px; }
+.dz-urban { background: var(--paper); }
+.dz-urban__inner { padding: 48px var(--pad) 64px; }
 .dz-urban__title {
   font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 40px);
   line-height: 1.15; color: var(--ink); margin: 0;
@@ -1526,7 +1522,7 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 .dz-urban__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
 .dz-urban-card {
   display: flex; flex-direction: column;
-  background: #fff; border: 1px solid rgba(27,31,42,0.12);
+  background: rgba(255,255,255,0.6); border: 1px solid rgba(27,31,42,0.12);
 }
 .dz-urban-card__img { aspect-ratio: 396 / 340; overflow: hidden; background: var(--stone); }
 .dz-urban-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; }
