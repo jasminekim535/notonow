@@ -122,7 +122,7 @@ figure, figcaption { margin: 0; }
 .brand p { line-height: 1.4; }
 .brand__logo {
   display: block;
-  height: 22px;
+  height: 21px;
   width: auto;
   /* Logo art is solid black; invert to white to sit on the dark nav. */
   filter: brightness(0) invert(1);
