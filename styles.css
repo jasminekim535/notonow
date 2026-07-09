@@ -120,16 +120,19 @@ figure, figcaption { margin: 0; }
 }
 
 .brand p { line-height: 1.4; }
+.brand__logo {
+  display: block;
+  height: 19px;
+  width: auto;
+  /* Logo art is solid black; invert to white to sit on the dark nav. */
+  filter: brightness(0) invert(1);
+  opacity: 0.88;
+}
 .brand__en {
   font-size: 11px;
   letter-spacing: 3.5px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
-}
-.brand__jp {
-  font-family: var(--jp);
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.5);
 }
 
 .nav__links {
@@ -204,11 +207,9 @@ body.mode-jp .jp-full { display: block; }
 .docs__h2-jp { margin-top: 8px; font-family: var(--jp); font-size: 13px; color: rgba(255, 255, 255, 0.6); }
 
 /* ---- Nav: Japanese leaves the bar in EN mode; English leaves in JP mode ---- */
-body.mode-en .nav__link .jp,
-body.mode-en .brand__jp { display: none; }
+body.mode-en .nav__link .jp { display: none; }
 body.mode-jp .nav__link .en { display: none; }
 body.mode-jp .nav__link .jp { font-size: 12px; color: #fff; letter-spacing: 1px; }
-body.mode-jp .brand__jp { color: rgba(255, 255, 255, 0.75); }
 
 /* ---- EN mode: lift the Japanese accents so they read clearly ---- */
 body.mode-en .hero__title-jp { color: rgba(255, 255, 255, 0.78); }
