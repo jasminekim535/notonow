@@ -1512,14 +1512,14 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 
 /* --- F · Three urban strategies for Wajima (light image cards) --- */
 .dz-urban { background: var(--paper); }
-.dz-urban__inner { padding: 48px var(--pad) 64px; }
+.dz-urban__inner { padding: 0 var(--pad) 72px; }
 .dz-urban__title {
   font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.4vw, 40px);
   line-height: 1.15; color: var(--ink); margin: 0;
 }
 .dz-urban__title-jp { font-family: var(--jp); font-size: 13px; color: rgba(27,31,42,0.5); margin: 8px 0 0; }
 .dz-urban__divider { height: 1px; background: rgba(27,31,42,0.15); margin: 32px 0 0; }
-.dz-urban__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+.dz-urban__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 8px; }
 .dz-urban-card {
   display: flex; flex-direction: column;
   background: rgba(255,255,255,0.6); border: 1px solid rgba(27,31,42,0.12);
