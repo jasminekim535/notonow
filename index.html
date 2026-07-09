@@ -171,13 +171,12 @@
 
     <div class="carousel-x" data-carousel data-per="3">
       <div class="container carousel-x__topbar">
-        <span class="carousel-x__indicator" data-indicator>01 — 03 / 10</span>
+        <span class="carousel-x__indicator" data-indicator>01 — 03 / 09</span>
         <div class="carousel-x__btns">
           <button type="button" class="cbtn" data-prev aria-label="Previous">&#8592;</button>
           <button type="button" class="cbtn" data-next aria-label="Next">&#8594;</button>
         </div>
       </div>
-      <div class="carousel-x__divider"></div>
       <div class="container">
       <div class="carousel-x__viewport" data-viewport>
         <div class="carousel-x__track heritage__track" data-track>
@@ -279,6 +278,8 @@
       </div>
     </div>
   </section>
+
+  <div class="container"><span class="section-divider"></span></div>
 
   <!-- ============ THREE URBAN STRATEGIES FOR WAJIMA ============ -->
   <section class="dz-urban" id="strategies">
@@ -491,7 +492,7 @@
         track.style.transform = "translateX(" + (-shift) + "px)";
         var start = page * per + 1;
         var end = Math.min(start + per - 1, cards.length);
-        if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + cards.length;
+        if (ind) ind.textContent = pad(start) + " — " + pad(end) + " / " + pad(cards.length);
         if (prev) prev.disabled = page === 0;
         if (next) next.disabled = page >= lastPage;
         if (thumb) {
