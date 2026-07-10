@@ -432,6 +432,9 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   object-fit: cover;
   opacity: 0.7;
 }
+/* The car sits left-of-centre in the roads-collapse photo; bias the crop
+   left so it isn't sliced by the narrow cell. */
+.mosaic__cell img[data-img="hero"] { object-position: 30% center; }
 .mosaic__cell::after {
   content: "";
   position: absolute;
