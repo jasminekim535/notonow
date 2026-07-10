@@ -1115,7 +1115,7 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
   overflow: hidden;
   background: var(--stone);
 }
-.story-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0.85; }
+.story-card__img img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: 1; }
 .story-card__img img[data-img="goal"] { object-position: 50% 32%; }
 .story-card__body { padding: 32px; }
 .story-card__no {
