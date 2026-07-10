@@ -439,7 +439,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(27, 31, 42, 0.7) 0%, rgba(0, 0, 0, 0) 40%);
+  background: linear-gradient(to top, rgba(27, 31, 42, 0.8) 0%, rgba(0, 0, 0, 0) 46%);
 }
 .caption {
   position: absolute;
