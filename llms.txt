@@ -1,0 +1,22 @@
+# Noto Now
+
+> Noto Now is a bilingual (English / Japanese) editorial site presenting the NOW Institute's architecture and urban-recovery framework for Japan's Noto Peninsula (Oku-Noto), developed in partnership with the City of Wajima following the magnitude 7.6 earthquake of January 1, 2024. The project pairs disaster-resistant spatial planning with the region's cultural and economic engines — Wajima-nuri lacquerware, Kiriko festivals, agriculture, seafood, and Wagyu.
+
+The site is a static, five-page bilingual site. Every page contains both English and Japanese content; a client-side toggle switches languages without changing the URL, so each page has a single canonical URL.
+
+## Pages
+
+- [Home](https://www.notonow.org/): Overview of the project — the disaster, the region's cultural economic engines, urban strategies, architectural speculations, and field documentation.
+- [About](https://www.notonow.org/about): About the project and its partners, and the "Noto Now 1" narrative — the disaster, the strategy, the approach, and the goal.
+- [History](https://www.notonow.org/history): Oku-Noto's heritage crafts and industries, the 2024 earthquake damage, and a gallery of on-the-ground site images.
+- [Design](https://www.notonow.org/design): The planning framework — three scales of design, four regional strategies for Ishikawa, urban strategies for Wajima, the Suzu disaster response plan, and architectural speculations.
+- [Credits](https://www.notonow.org/credits): Publishing and contributor credits.
+
+## Partners
+
+- The NOW Institute
+- City of Wajima
+- USC School of Architecture
+- Rise-Kyoto
+- Nippon Design Center USA
+- University of Hiroshima
