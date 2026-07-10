@@ -1576,10 +1576,20 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
   /* stack the map: keep the full diagram (map + route + dots) as one figure,
      then flow the four cards below it — nothing is hidden. */
   .dz-map { position: static; aspect-ratio: auto; display: flex; flex-direction: column; align-items: center; gap: 28px; }
-  .dz-map__figure { position: relative; inset: auto; width: 100%; max-width: 520px; aspect-ratio: 820 / 635; }
-  /* stacked: drop the connector lines, keep only the red route */
+  /* Crop the wide canvas down to just the peninsula band and scale it up,
+     since the cards now sit below and no longer need the side room. The
+     peninsula image and the route overlay share the same 820×635 space, so
+     both are re-mapped by the identical factor — no distortion. */
+  .dz-map__figure {
+    position: relative; inset: auto; width: 100%; max-width: 560px;
+    aspect-ratio: 440 / 615; overflow: hidden;
+  }
+  .dz-map__peninsula { left: 13.64%; top: 4.88%; width: 72.73%; }
+  /* The connector overlay points at the desktop corner cards (gone here),
+     and the route-only overlay doesn't register with the cropped peninsula,
+     so drop both and show the clean, enlarged labelled map. */
   .dz-map__overlay--full { display: none; }
-  .dz-map__overlay--route { display: block; }
+  .dz-map__overlay--route { display: none; }
   .dz-map__card { position: static; width: 100%; max-width: 460px; }
   .dz-map__card--tl, .dz-map__card--bl, .dz-map__card--tr, .dz-map__card--br { left: auto; top: auto; }
 }
