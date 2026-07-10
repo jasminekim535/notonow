@@ -792,7 +792,7 @@ body.mode-jp .caption__jp { font-size: 12px; color: rgba(255, 255, 255, 0.85); }
   background: var(--red);
 }
 .footer__brand .desc {
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.7);
@@ -1020,7 +1020,7 @@ body.mode-jp .caption__jp { font-size: 12px; color: rgba(255, 255, 255, 0.85); }
 }
 .spec__desc {
   margin-top: 16px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 1.85;
   color: rgba(27, 31, 42, 0.65);
   max-width: 576px;
@@ -1084,7 +1084,7 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
 }
 
 /* Speculations card subtitle (accent in the other language) */
-.spec__subtitle { margin-top: 4px; font-size: 11px; line-height: 1.5; color: rgba(27, 31, 42, 0.5); }
+.spec__subtitle { margin-top: 4px; font-size: 12px; line-height: 1.5; color: rgba(27, 31, 42, 0.5); }
 
 /* ============================================================
    ABOUT PAGE (about.html)
@@ -1149,7 +1149,7 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
 }
 .story-card__text {
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.9;
   color: rgba(27, 31, 42, 0.65);
   margin: 0;
@@ -1333,9 +1333,9 @@ body.mode-jp .history-intro__body p {
   text-transform: uppercase; color: #fff;
 }
 .dz-hero__item-title { font-family: var(--serif); font-style: italic; font-size: 22px; color: #f5f2ec; }
-.dz-hero__item-jp { font-size: 10px; color: rgba(255,255,255,0.52); }
+.dz-hero__item-jp { font-size: 11px; color: rgba(255,255,255,0.52); }
 .dz-hero__item-body {
-  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  font-family: var(--sans); font-size: 14px; line-height: 1.85;
   color: rgba(255,255,255,0.5); margin: 16px 0 0;
 }
 
@@ -1358,10 +1358,10 @@ body.mode-jp .history-intro__body p {
   font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 15px;
   color: rgba(255,255,255,0.6); margin: 10px 0 0;
 }
-.dz-scale__title-jp { font-size: 10px; color: rgba(255,255,255,0.58); margin: 4px 0 0; }
+.dz-scale__title-jp { font-size: 11px; color: rgba(255,255,255,0.58); margin: 4px 0 0; }
 .dz-scale__desc {
-  font-family: var(--sans); font-size: 11px; line-height: 1.7;
-  color: rgba(255,255,255,0.3); margin: 6px 0 0;
+  font-family: var(--sans); font-size: 12px; line-height: 1.7;
+  color: rgba(255,255,255,0.5); margin: 6px 0 0;
 }
 
 /* --- C · Three challenges (light, expandable accordion) --- */
@@ -1434,7 +1434,7 @@ body.mode-jp .history-intro__body p {
   margin: 0 0 40px 64px;
   padding-left: 32px;
   border-left: 1px solid rgba(27,31,42,0.15);
-  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  font-family: var(--sans); font-size: 14px; line-height: 1.85;
   color: rgba(27,31,42,0.68);
 }
 .dz-chal-panel__body.jp { font-size: 12px; line-height: 2; color: rgba(27,31,42,0.55); }
@@ -1461,10 +1461,10 @@ body.mode-jp .history-intro__body p {
 .dz-strat-col__sub { margin: 4px 0 0; font-size: 10px; color: rgba(255,255,255,0.5); }
 .dz-strat-col__rule { display: block; width: 20px; height: 1px; background: rgba(255,255,255,0.15); margin: 20px 0; }
 .dz-strat-col__body {
-  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  font-family: var(--sans); font-size: 14px; line-height: 1.85;
   color: rgba(255,255,255,0.5); margin: 0;
 }
-.dz-strat-col__body.jp { font-size: 11px; line-height: 2; color: rgba(255,255,255,0.5); }
+.dz-strat-col__body.jp { font-size: 12px; line-height: 2; color: rgba(255,255,255,0.5); }
 
 /* --- E · Four Regional Strategies (map diagram) --- */
 .dz-regional { background: var(--paper); padding: 72px 0 88px; }
@@ -1499,9 +1499,9 @@ body.mode-jp .history-intro__body p {
   font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.5px;
   text-transform: uppercase; color: var(--ink);
 }
-.dz-map-card__jp { margin: 3px 0 0; font-size: 9px; color: rgba(27,31,42,0.6); }
+.dz-map-card__jp { margin: 3px 0 0; font-size: 11px; color: rgba(27,31,42,0.6); }
 .dz-map-card__body {
-  font-family: var(--sans); font-size: 10px; line-height: 1.6;
+  font-family: var(--sans); font-size: 12px; line-height: 1.6;
   color: rgba(27,31,42,0.6); margin: 8px 0 0;
 }
 /* JP mode: promote the Japanese subtitle to the card lead, shrink the English */
@@ -1538,10 +1538,10 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 .dz-urban-card__jp { margin: 4px 0 0; font-size: 10px; color: rgba(27,31,42,0.64); }
 .dz-urban-card__rule { display: block; width: 20px; height: 1px; background: rgba(27,31,42,0.15); margin: 20px 0; }
 .dz-urban-card__text {
-  font-family: var(--sans); font-size: 13px; line-height: 1.85;
+  font-family: var(--sans); font-size: 14px; line-height: 1.85;
   color: rgba(27,31,42,0.7); margin: 0;
 }
-.dz-urban-card__text.jp { font-size: 11px; line-height: 2; color: rgba(27,31,42,0.64); }
+.dz-urban-card__text.jp { font-size: 12px; line-height: 2; color: rgba(27,31,42,0.64); }
 
 /* --- G · Suzu: Disaster Response Plan (text left, image right) --- */
 .dz-suzu { background: var(--paper); }
@@ -1557,10 +1557,10 @@ body.mode-jp .dz-map-card__body.jp { font-size: 11px; line-height: 1.7; color: r
 .dz-suzu__title-jp { font-family: var(--jp); font-size: 13px; color: rgba(27,31,42,0.62); margin: 8px 0 0; }
 .dz-suzu__rule { display: block; width: 32px; height: 1px; background: var(--red); margin: 28px 0 0; }
 .dz-suzu__body {
-  font-family: var(--sans); font-size: 13px; line-height: 1.9; color: rgba(27,31,42,0.7);
+  font-family: var(--sans); font-size: 14px; line-height: 1.9; color: rgba(27,31,42,0.7);
   margin: 24px 0 0;
 }
-.dz-suzu__body.jp { font-size: 11px; line-height: 2; color: rgba(27,31,42,0.64); margin-top: 12px; }
+.dz-suzu__body.jp { font-size: 12px; line-height: 2; color: rgba(27,31,42,0.64); margin-top: 12px; }
 .dz-suzu__media { aspect-ratio: 547 / 360; overflow: hidden; background: var(--stone); }
 .dz-suzu__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
