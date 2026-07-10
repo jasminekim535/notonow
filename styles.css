@@ -430,7 +430,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.7;
+  opacity: 1;
 }
 /* The car sits left-of-centre in the roads-collapse photo; bias the crop
    left so it isn't sliced by the narrow cell. */
@@ -439,7 +439,7 @@ body.mode-jp .caption__jp { font-size: 10px; color: rgba(255, 255, 255, 0.72); }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(27, 31, 42, 0.75) 0%, rgba(0, 0, 0, 0) 55%);
+  background: linear-gradient(to top, rgba(27, 31, 42, 0.5) 0%, rgba(0, 0, 0, 0) 38%);
 }
 .caption {
   position: absolute;
