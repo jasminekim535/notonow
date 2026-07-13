@@ -68,6 +68,10 @@ figure, figcaption { margin: 0; }
 .kicker--light { color: rgba(255, 255, 255, 0.5); }
 
 .jp { font-family: var(--jp); }
+/* Force Japanese to Noto Serif JP even inside sans body blocks (e.g. the
+   design page reuses .dz-*__body for both languages, and the sans rule
+   would otherwise win by source order). */
+body .jp { font-family: var(--jp); }
 
 /* small red rule used as a section marker */
 .rule {
@@ -216,7 +220,7 @@ body.mode-jp .jp-full { display: block; }
 /* ---- Nav: Japanese leaves the bar in EN mode; English leaves in JP mode ---- */
 body.mode-en .nav__link .jp { display: none; }
 body.mode-jp .nav__link .en { display: none; }
-body.mode-jp .nav__link .jp { font-size: 12px; color: #fff; letter-spacing: 1px; }
+body.mode-jp .nav__link .jp { font-size: 14px; color: #fff; letter-spacing: 1px; }
 
 /* ---- EN mode: lift the Japanese accents so they read clearly ---- */
 body.mode-en .hero__title-jp { color: rgba(255, 255, 255, 0.78); }
@@ -806,7 +810,7 @@ body.mode-jp .caption__jp { font-size: 13px; color: rgba(255, 255, 255, 0.85); }
   background: var(--red);
 }
 .footer__brand .desc {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.7);
@@ -835,7 +839,7 @@ body.mode-en .footer__brand .desc { font-size: 12px; }
   font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
   color: rgba(255, 255, 255, 0.7); transition: color 0.2s ease;
 }
-.footer__nav a .jp { font-family: var(--jp); letter-spacing: normal; text-transform: none; }
+.footer__nav a .jp { font-family: var(--jp); font-size: 14px; letter-spacing: normal; text-transform: none; }
 .footer__nav a:hover { color: #fff; }
 .footer__bar {
   border-top: 1px solid rgba(255, 255, 255, 0.06);
