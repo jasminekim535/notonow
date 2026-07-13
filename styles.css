@@ -1010,7 +1010,9 @@ body.mode-en .footer__brand .desc { font-size: 12px; }
 }
 .spec__frame {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  /* Cap the height so the image doesn't dominate laptop screens; keeps
+     full width (no aspect-ratio, so it can't shrink horizontally). */
+  height: clamp(300px, 40vw, 500px);
   overflow: hidden;
   background: #20242e;
 }
