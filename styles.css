@@ -57,6 +57,13 @@ figure, figcaption { margin: 0; }
   text-transform: uppercase;
   color: rgba(27, 31, 42, 0.5);
 }
+/* Japanese half of an eyebrow: larger and untracked so kanji stay legible. */
+.kicker__jp {
+  font-family: var(--jp);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: none;
+}
 
 .kicker--light { color: rgba(255, 255, 255, 0.5); }
 
