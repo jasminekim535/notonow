@@ -448,7 +448,7 @@ body.mode-jp .caption__jp { font-size: 13px; color: rgba(255, 255, 255, 0.85); }
   z-index: 2;
 }
 .caption__en {
-  font-size: 11px;
+  font-size: 10px;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85);
@@ -797,6 +797,8 @@ body.mode-jp .caption__jp { font-size: 13px; color: rgba(255, 255, 255, 0.85); }
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.7);
 }
+/* English footer copy reads slightly smaller; JP keeps its larger size */
+body.mode-en .footer__brand .desc { font-size: 12px; }
 .footer__cols { display: flex; gap: 64px; }
 .footer__col h4 {
   margin: 0 0 14px;
