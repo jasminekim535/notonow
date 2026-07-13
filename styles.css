@@ -1722,11 +1722,11 @@ body.mode-jp .dz-suzu__body.jp { font-size: 15px; line-height: 2; color: rgba(27
 }
 .credit__main { min-width: 0; }
 .credit__name {
-  display: block; font-family: var(--serif); font-size: 17px; line-height: 1.3; color: var(--ink);
+  display: block; font-family: var(--serif); font-size: 18px; line-height: 1.3; color: var(--ink);
 }
 .credit__role {
   display: block; margin-top: 2px;
-  font-family: var(--sans); font-size: 10px; letter-spacing: 0.3px; color: rgba(27,31,42,0.45);
+  font-family: var(--sans); font-size: 12px; letter-spacing: 0.3px; color: rgba(27,31,42,0.45);
 }
 .credit__jp {
   flex: none; text-align: right; white-space: nowrap;
