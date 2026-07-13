@@ -1109,7 +1109,7 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
 .spec__subtitle { margin-top: 4px; font-size: 12px; line-height: 1.5; color: rgba(27, 31, 42, 0.5); }
 /* When the subtitle shows the English title (JP mode, no .jp class), use the
    display serif instead of inheriting the sans body font. */
-.spec__subtitle:not(.jp) { font-family: var(--serif); font-style: italic; font-size: 15px; }
+.spec__subtitle:not(.jp) { font-family: var(--serif); font-size: 15px; }
 
 /* ============================================================
    ABOUT PAGE (about.html)
