@@ -1211,15 +1211,16 @@ body.mode-jp .story-card__title-jp {
   grid-template-columns: 1fr 1fr;
   padding: 96px var(--pad) 104px;
 }
-.history-intro__text { padding-right: 64px; max-width: 600px; }
+.history-intro__text { padding-right: 40px; max-width: 600px; }
 .history-intro__h1 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(52px, 8vw, 89px);
+  font-size: clamp(46px, 6vw, 76px);
   line-height: 1;
   letter-spacing: -0.5px;
   color: var(--ink);
   margin: 24px 0 0;
+  white-space: nowrap; /* "History of Noto" stays on one line */
 }
 .history-intro__h1-jp {
   margin-top: 10px;
