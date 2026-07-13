@@ -1214,7 +1214,6 @@ body.mode-jp .story-card__title-jp {
 .history-intro__text { padding-right: 64px; max-width: 600px; }
 .history-intro__h1 {
   font-family: var(--serif);
-  font-style: italic;
   font-weight: 500;
   font-size: clamp(52px, 8vw, 89px);
   line-height: 1;
@@ -1343,7 +1342,7 @@ body.mode-jp .history-intro__body p {
   text-transform: uppercase; color: #fff;
 }
 .dz-hero__h1 {
-  font-family: var(--serif); font-style: italic; font-weight: 300;
+  font-family: var(--serif); font-weight: 300;
   font-size: clamp(38px, 4.6vw, 62px); line-height: 1.07; letter-spacing: -0.5px;
   color: #f5f2ec; margin: 32px 0 0;
 }
@@ -1688,7 +1687,7 @@ body.mode-jp .dz-suzu__body.jp { font-size: 15px; line-height: 2; color: rgba(27
 .credits__inner { padding: 72px var(--pad) 96px; }
 .credits__head { }
 .credits__h1 {
-  font-family: var(--serif); font-style: italic; font-weight: 500;
+  font-family: var(--serif); font-weight: 500;
   font-size: clamp(44px, 6vw, 76px); line-height: 1; letter-spacing: -0.5px;
   color: var(--ink); margin: 14px 0 0;
 }
