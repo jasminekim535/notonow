@@ -451,6 +451,17 @@
       img.src = FIGMA[key] || ("images/" + key + ".jpg");
     });
 
+    // ---- Sticky nav: solidify once scrolled off the hero --------------------
+    (function () {
+      var nav = document.querySelector(".nav");
+      if (!nav) return;
+      function onScroll() {
+        nav.classList.toggle("nav--scrolled", window.scrollY > 40);
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
+
     // ---- Language toggle ----------------------------------------------------
     (function () {
       var KEY = "nn-lang";
