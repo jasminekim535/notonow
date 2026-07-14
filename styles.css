@@ -1015,12 +1015,14 @@ body.mode-en .footer__brand .desc { font-size: 12px; }
 }
 .spec__frame {
   width: 100%;
-  /* Cap the height so the image doesn't dominate laptop screens; keeps
-     full width (no aspect-ratio, so it can't shrink horizontally). */
-  height: clamp(300px, 40vw, 500px);
+  /* Sized closer to the images' own 16:9 so less is cropped, but capped so
+     it doesn't dominate a laptop screen. Full width (no aspect-ratio, so it
+     can't shrink horizontally). */
+  height: clamp(320px, 46vw, 580px);
   overflow: hidden;
   background: #20242e;
 }
+.spec__frame img { object-position: center 42%; }
 .spec__frame img { width: 100%; height: 100%; object-fit: cover; }
 .spec__caption {
   display: flex;
