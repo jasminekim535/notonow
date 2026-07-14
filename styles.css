@@ -227,6 +227,9 @@ body.mode-en .hero__title-jp { color: rgba(255, 255, 255, 0.78); }
 body.mode-en .damage__sub { color: rgba(255, 255, 255, 0.7); }
 body.mode-en .hcard__title-jp { color: rgba(27, 31, 42, 0.62); }
 body.mode-en .about__h2-jp { color: rgba(27, 31, 42, 0.62); }
+/* About PAGE title: match the other inner-page H1 sizes (not the home section h2) */
+h1.about__h2 { font-size: clamp(40px, 5vw, 64px); }
+body.mode-jp h1.about__h2 + .about__h2-jp { font-size: clamp(40px, 5vw, 64px); }
 body.mode-en .principle__title-jp { color: rgba(27, 31, 42, 0.6); }
 body.mode-en .kicker { color: rgba(27, 31, 42, 0.6); }
 body.mode-en .docs .kicker { color: rgba(255, 255, 255, 0.6); }
@@ -1215,7 +1218,7 @@ body.mode-jp .story-card__title-jp {
 .history-intro__h1 {
   font-family: var(--serif);
   font-weight: 500;
-  font-size: clamp(46px, 6vw, 76px);
+  font-size: clamp(40px, 5vw, 64px);
   line-height: 1;
   letter-spacing: -0.5px;
   color: var(--ink);
@@ -1297,7 +1300,7 @@ body.mode-jp .story-card__title-jp {
 body.mode-en .history-intro__h1-jp { color: rgba(27, 31, 42, 0.5); }
 body.mode-jp .history-intro__h1 { font-size: 26px; opacity: 0.5; }
 body.mode-jp .history-intro__h1-jp {
-  font-size: 40px;
+  font-size: clamp(40px, 5vw, 64px);
   line-height: 1.2;
   color: var(--ink);
   margin-top: 10px;
@@ -1689,12 +1692,12 @@ body.mode-jp .dz-suzu__body.jp { font-size: 15px; line-height: 2; color: rgba(27
 .credits__head { }
 .credits__h1 {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(44px, 6vw, 76px); line-height: 1; letter-spacing: -0.5px;
+  font-size: clamp(40px, 5vw, 64px); line-height: 1; letter-spacing: -0.5px;
   color: var(--ink); margin: 14px 0 0;
 }
 .credits__h1-jp {
   font-family: var(--jp); font-style: normal; font-weight: 500;
-  font-size: clamp(44px, 6vw, 76px); line-height: 1.08; letter-spacing: 1px;
+  font-size: clamp(40px, 5vw, 64px); line-height: 1.08; letter-spacing: 1px;
   color: var(--ink); margin: 14px 0 0;
 }
 .credits__divider { display: block; height: 1px; background: rgba(27,31,42,0.15); margin: 28px 0 0; }
