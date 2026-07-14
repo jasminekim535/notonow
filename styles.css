@@ -558,6 +558,7 @@ body.mode-jp .caption__jp { font-size: 13px; color: rgba(255, 255, 255, 0.85); }
 }
 .hcard__title {
   font-family: var(--serif);
+  font-style: italic;
   font-weight: 500;
   font-size: 28px;
   line-height: 1.15;
@@ -1136,7 +1137,7 @@ body.mode-jp .spec__track .hcard__title { font-size: 28px; opacity: 1; }
 .story-card {
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.6);
+  background: #fff;
 }
 .story-card__img {
   height: 296px;
