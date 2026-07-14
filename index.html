@@ -526,11 +526,11 @@
       var slides = [
         { img: "spec1",  t: "Flood Control Villages", d: "Mitigate mudslides by tier and dampen successive stages of river flow to the sea by creating diversionary ponds and lakes to slow the speed of the water. Leverage these lakes as resort towns for the tourist economy.", tj: "治水の村", dj: "段階的に土砂崩れを抑え、分水池や湖を設けて川から海への流れを緩やかにし、水の速度を落とす。これらの湖を観光経済のためのリゾート地として活用する。" },
         { img: "spec2",  t: "New Culinary School and Urban Farm", d: "Culinary school that specializes in the agricultural bounty of Oku-Noto, which further promotes the role of urban farming to contribute to a larger sponge landscape strategy against flooding.", tj: "新しい料理学校と都市農園", dj: "奥能登の農産物を専門とする料理学校。都市農業の役割をさらに促進し、洪水対策としての大規模なスポンジランドスケープ戦略に貢献する。" },
-        { img: "spec3",  t: "New Morning Market & Community Center", d: "Rebirth of the morning market which was a hub for every Wajima resident as a hybridized destination of a market, community center, and emergency shelter.", tj: "新しい朝市とコミュニティセンター", dj: "輪島のすべての住民の拠点であった朝市を、市場・コミュニティセンター・避難所を兼ねた複合施設として再生する。" },
+        { img: "spec3",  pos: "center 66%", t: "New Morning Market & Community Center", d: "Rebirth of the morning market which was a hub for every Wajima resident as a hybridized destination of a market, community center, and emergency shelter.", tj: "新しい朝市とコミュニティセンター", dj: "輪島のすべての住民の拠点であった朝市を、市場・コミュニティセンター・避難所を兼ねた複合施設として再生する。" },
         { img: "spec4",  t: "New Wajima-Nuri School", d: "Create a school for lacquerware to help maintain the cultural position of the tradition for generations.", tj: "新しい輪島塗学校", dj: "輪島塗の学校を設立し、その伝統の文化的地位を次世代へと守り継ぐ。" },
         { img: "spec5",  t: "New Jozu Shrine", d: "Rebirth of one of the key shrines that was destroyed during the earthquake as both a shrine and a place of refuge in the event of a natural disaster.", tj: "新しい神社", dj: "地震で失われた主要な神社の一つを、神社であると同時に自然災害時の避難場所として再建する。" },
         { img: "spec6",  t: "Community Center / Emergency Shelter", d: "An anchor to the southern tip of the evacuation route with the capacity to shelter and triage 50% of Wajima's population, designed to accommodate expansion for the future.", tj: "コミュニティセンター／避難所", dj: "避難経路の南端の拠点として、輪島の人口の50%を収容・トリアージできる能力を持ち、将来の拡張にも対応できるよう設計されている。" },
-        { img: "spec7",  t: "New Wajima Train Station", d: "Ensuring Oku-Noto and Wajima's transportation is critical to their future, as it is limited currently. Reintroduce rail connection as the essential seed for future-proofing a vital, rich vision for the region.", tj: "新しい輪島駅", dj: "奥能登と輪島の交通は現在限られており、その未来にとって極めて重要である。地域の豊かな未来を支える不可欠な種として、鉄道接続を再導入する。" },
+        { img: "spec7",  pos: "center 62%", t: "New Wajima Train Station", d: "Ensuring Oku-Noto and Wajima's transportation is critical to their future, as it is limited currently. Reintroduce rail connection as the essential seed for future-proofing a vital, rich vision for the region.", tj: "新しい輪島駅", dj: "奥能登と輪島の交通は現在限られており、その未来にとって極めて重要である。地域の豊かな未来を支える不可欠な種として、鉄道接続を再導入する。" },
         { img: "spec8",  t: "Kiriko Craft Square", d: "A crafts village and square dedicated to Kiriko float construction serves as a community anchor, drawing international students and craftspeople for months-long apprenticeships.", tj: "キリコ工芸広場", dj: "キリコ山車の制作に特化した工芸村と広場は、地域の拠点となり、数か月にわたる研修のために海外からの学生や職人を惹きつける。" },
         { img: "spec9",  t: "Urban Farm and Culinary Center", d: "A culinary partnership connecting cooking schools with Noto's farmers, fishermen, and traditional kitchens — bringing students and chefs for seasonal training that promotes local ingredients and sustains year-round activity for the region's agriculture and fisheries.", tj: "都市農園と料理センター", dj: "料理学校と能登の農家・漁師・伝統的な厨房を結ぶ食の連携。学生とシェフを季節ごとの研修に招き、地元の食材を活かし、地域の農業と漁業に一年を通じた活気をもたらす。" },
         { img: "spec10", t: "Kiriko Outdoor Museum", d: "Collecting relics and artifacts from several yearly festivals as a memorial and museum for the Kiriko Festival.", tj: "キリコ野外博物館", dj: "毎年の祭りから遺物や工芸品を集め、キリコ祭りの記念館・博物館とする。" },
@@ -552,6 +552,7 @@
         var jp = document.body.classList.contains("mode-jp");
         img.onerror = function () { img.onerror = null; img.src = "images/" + s.img + ".jpg"; };
         img.src = "images/" + s.img + ".jpg";
+        img.style.objectPosition = s.pos || "";
         img.alt = s.t;
         no.textContent = pad(i + 1);
         title.textContent = jp ? s.tj : s.t;
