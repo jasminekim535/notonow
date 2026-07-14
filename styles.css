@@ -254,7 +254,7 @@ body.mode-jp .heritage__h2-jp { font-size: 40px; line-height: 1.2; color: var(--
 body.mode-jp .about__h2-jp { font-size: 40px; line-height: 1.2; color: var(--ink); margin-top: 10px; }
 body.mode-jp .hcard__title-jp { font-size: 22px; line-height: 1.3; color: var(--ink); }
 body.mode-jp .principle__title-jp { font-size: 21px; line-height: 1.5; color: var(--ink); margin-top: 8px; }
-body.mode-jp .docs__h2-jp { font-size: 40px; line-height: 1.2; color: #fff; }
+body.mode-jp .docs__h2-jp { font-size: 34px; line-height: 1.2; color: #fff; }
 
 /* enlarge Japanese body text for comfortable reading */
 body.mode-jp .hero__lead .jp { font-size: 15px; line-height: 1.9; color: rgba(255, 255, 255, 0.8); }
@@ -1687,7 +1687,7 @@ body.mode-jp .dz-urban__title { font-size: 22px; opacity: 0.5; }
 body.mode-jp .dz-urban__title-jp { font-size: 40px; color: var(--ink); margin-top: 6px; }
 
 /* G · Suzu disaster response plan (light) */
-body.mode-jp .dz-suzu__title { font-size: 22px; opacity: 0.5; }
+body.mode-jp .dz-suzu__title { font-size: 22px; opacity: 0.5; margin-top: 28px; }
 body.mode-jp .dz-suzu__title-jp { font-size: 40px; color: var(--ink); margin-top: 6px; }
 body.mode-jp .dz-suzu__body.jp { font-size: 15px; line-height: 2; color: rgba(27,31,42,0.72); }
 
